@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Sigma_Trainer.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Sigma_Trainer.View"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Sigma_Trainer">
+
+    <ShellContent
+        Title="Обзор"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Тренировки"
+        ContentTemplate="{DataTemplate local:WorkoutPage}"
+        Route="WorkoutPage"/>
+    <ShellContent
+    Title="Питание"
+    ContentTemplate="{DataTemplate local:NutritionPage}"
+    Route="NutritionPage"/>
+
+</Shell>
