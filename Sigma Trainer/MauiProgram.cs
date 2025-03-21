@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Plugin.Maui.Pedometer;
 using Sigma_Trainer.ViewModel;
 
 namespace Sigma_Trainer
