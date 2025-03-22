@@ -8,8 +8,8 @@
     Title="Sigma_Trainer">
 
     <ShellContent
-        Title="Обзор"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="Сводка"
+        ContentTemplate="{DataTemplate local:SummaryPage}"
         Route="MainPage" />
     <ShellContent
         Title="Тренировки"
@@ -20,4 +20,4 @@
     ContentTemplate="{DataTemplate local:NutritionPage}"
     Route="NutritionPage"/>
 
-</Shell>
+</Shell>новал 

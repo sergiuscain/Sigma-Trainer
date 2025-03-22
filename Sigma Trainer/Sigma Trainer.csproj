@@ -68,7 +68,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Model\" />
-	  <Folder Include="ViewModel\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\SummaryPage.xaml.cs">
+	    <DependentUpon>SummaryPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>

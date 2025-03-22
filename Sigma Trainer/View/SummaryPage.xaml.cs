@@ -1,11 +1,9 @@
 ﻿using Sigma_Trainer.ViewModel;
 
 namespace Sigma_Trainer.View;
-public partial class MainPage : ContentPage
+public partial class SummaryPage : ContentPage
 {
-    int count = 0;
-
-    public MainPage(MainViewModel vm)
+    public SummaryPage(ViewModel.SummaryViewModel vm)
     {
         BindingContext = vm;
         InitializeComponent();

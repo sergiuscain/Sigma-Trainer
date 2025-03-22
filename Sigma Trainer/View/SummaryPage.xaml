@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmode="clr-namespace:Sigma_Trainer.ViewModel"
-             x:DataType="viewmode:MainViewModel"
-             x:Class="Sigma_Trainer.View.MainPage"
-             Title="Обзор">
+             x:DataType="viewmode:SummaryViewModel"
+             x:Class="Sigma_Trainer.View.SummaryPage"
+             Title="Сводка">
 
     <ScrollView>
     </ScrollView>

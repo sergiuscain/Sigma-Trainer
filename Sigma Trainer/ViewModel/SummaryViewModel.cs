@@ -2,9 +2,9 @@
 
 namespace Sigma_Trainer.ViewModel
 {
-    public partial class MainViewModel : ObservableObject
+    public partial class SummaryViewModel : ObservableObject
     {
-        public MainViewModel()
+        public SummaryViewModel()
         {
         }
     }
