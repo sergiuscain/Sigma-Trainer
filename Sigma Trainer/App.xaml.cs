@@ -1,15 +1,16 @@
 ﻿
-using DBLibrary.Services;
+
+using DBLibrary.Data;
+using Sigma_Trainer.Services;
 
 namespace Sigma_Trainer
 {
     public partial class App : Application
     {
-        public App(DbService dbService)
+        public App(SigmaTrainerDbContext context)
         {
             InitializeComponent();
-            dbService.Migrate();
-            dbService.SeedDb();
+            context.Database.EnsureCreated();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

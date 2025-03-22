@@ -1,7 +1,10 @@
 ﻿using DBLibrary.Data;
-using DBLibrary.Services;
+using LiveChartsCore.SkiaSharpView.Maui;
 using Microsoft.Extensions.Logging;
+using Sigma_Trainer.Services;
+using Sigma_Trainer.View;
 using Sigma_Trainer.ViewModel;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace Sigma_Trainer
 {
@@ -12,6 +15,8 @@ namespace Sigma_Trainer
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp()
+                .UseLiveCharts()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -19,9 +24,15 @@ namespace Sigma_Trainer
                 });
             //База дынных
             builder.Services.AddDbContext<SigmaTrainerDbContext>();
-            builder.Services.AddSingleton<DbService>();
-            //Модели представления
+            builder.Services.AddSingleton<FoodService>();
+            builder.Services.AddSingleton<StatisticsService>();
+            //Вкладки
+            builder.Services.AddSingleton<SummaryPage>();
             builder.Services.AddSingleton<SummaryViewModel>();
+            builder.Services.AddSingleton<WorkoutPage>();
+            builder.Services.AddSingleton<WorkoutViewModel>();
+            builder.Services.AddSingleton<NutritionPage>();
+            builder.Services.AddSingleton<NutritionViewModel>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
