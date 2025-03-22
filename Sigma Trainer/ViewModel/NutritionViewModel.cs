@@ -3,10 +3,10 @@ using CommunityToolkit.Mvvm.Input;
 using DBLibrary.Entities;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
-using LiveChartsCore.SkiaSharpView.Extensions;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.VisualElements;
 using Sigma_Trainer.Services;
+using Sigma_Trainer.View;
 using SkiaSharp;
 using System.Collections.ObjectModel;
 
@@ -119,10 +119,8 @@ namespace Sigma_Trainer.ViewModel
         [RelayCommand]
         public async Task AddFoodRecord()
         {
-            MealType mt = MealType.Перекус;
-            FoodRecord foodRecord = new FoodRecord() { Calories = random.Next(200, 700), Carbohydrates = random.Next(200), Date = DateTime.Now, Fats = random.Next(200), Protein = random.Next(200), MealType = mt };
-            await _foodService.AddFoodRecord(foodRecord);
-            TodayFoodRecords.Add(foodRecord);
+            var page = new AddFoodRecordPage(new AddFoodRecordViewModel(_foodService, _statisticsService));
+            await Shell.Current.Navigation.PushAsync(page);
         }
     }
 }

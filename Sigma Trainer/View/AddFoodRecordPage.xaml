@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sigma_Trainer.View.AddFoodRecordPage"
+             xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
+             x:DataType="viewmodel:AddFoodRecordViewModel"
+             Title="AddFoodRecordPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Добавление приема пищи"
+            FontSize="24"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry 
+            Placeholder="Калории (ккал)"
+            Keyboard="Numeric" 
+            Text="{Binding Calories, Mode=TwoWay}"/>
+        
+        <Entry 
+            Placeholder="Белки (г)"
+            Keyboard="Numeric" 
+            Text="{Binding Protein, Mode=TwoWay}"/>
+
+        <Entry 
+            Placeholder="Жиры (г)"
+            Keyboard="Numeric" 
+            Text="{Binding Fat, Mode=TwoWay}"/>
+
+        <Entry 
+            Placeholder="Углеводы (г)"
+            Keyboard="Numeric" 
+            Text="{Binding Carbohydrates, Mode=TwoWay}"/>
+
+        <Picker Title="Тип приема пищи" SelectedItem="{Binding SelectedMealType}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Завтрак</x:String>
+                    <x:String>Обед</x:String>
+                    <x:String>Ужин</x:String>
+                    <x:String>Перекус</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button 
+            Text="Добавить запись" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Command="{Binding AddFoodRecordCommand}"/>
+    </VerticalStackLayout>
+</ContentPage>
