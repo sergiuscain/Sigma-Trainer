@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DBLibrary.Data;
+using DBLibrary.Services;
+using Microsoft.Extensions.Logging;
 using Sigma_Trainer.ViewModel;
 
 namespace Sigma_Trainer
@@ -15,6 +17,10 @@ namespace Sigma_Trainer
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            //База дынных
+            builder.Services.AddDbContext<SigmaTrainerDbContext>();
+            builder.Services.AddSingleton<DbService>();
+            //Модели представления
             builder.Services.AddSingleton<SummaryViewModel>();
 #if DEBUG
             builder.Logging.AddDebug();

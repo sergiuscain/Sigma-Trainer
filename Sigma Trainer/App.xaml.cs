@@ -1,10 +1,15 @@
-﻿namespace Sigma_Trainer
+﻿
+using DBLibrary.Services;
+
+namespace Sigma_Trainer
 {
     public partial class App : Application
     {
-        public App()
+        public App(DbService dbService)
         {
             InitializeComponent();
+            dbService.Migrate();
+            dbService.SeedDb();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

@@ -17,6 +17,20 @@ namespace DBLibrary.Services
             _context = context;
         }
         /// <summary>
+        /// Делает миграцию
+        /// </summary>
+        public void Migrate()
+        {
+            _context.Database.Migrate();
+        }
+        /// <summary>
+        /// Инициализация базы данных данными по умолчанию
+        /// </summary>
+        public void SeedDb()
+        {
+            //Инициализация
+        }
+        /// <summary>
         /// Добавить запись о приеме пищи
         /// </summary>
         /// <param name="foodRecord"></param>

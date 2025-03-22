@@ -18,5 +18,11 @@ namespace DBLibrary.Data
             optionsBuilder.UseSqlite("Data Source=SigmaTrainer.db");
 #endif
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FoodRecord>()
+                .HasKey(f => f.Id);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

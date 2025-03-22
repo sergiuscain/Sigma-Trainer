@@ -19,5 +19,4 @@
     Title="Питание"
     ContentTemplate="{DataTemplate local:NutritionPage}"
     Route="NutritionPage"/>
-
-</Shell>новал 
+</Shell>
