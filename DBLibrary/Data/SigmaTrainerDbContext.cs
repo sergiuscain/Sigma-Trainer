@@ -12,6 +12,8 @@ namespace DBLibrary.Data
 
         public DbSet<FoodRecord> FoodRecords { get; set; }
         public DbSet<DailyFoodStatistics> DailyFoodStatistics { get; set; }
+        public DbSet<Exercises> Exercises { get; set; }
+        public DbSet<DailyExerciseStatistics> DailyExerciseSatistics { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,10 +36,28 @@ namespace DBLibrary.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Настройка FoodRecord
             modelBuilder.Entity<FoodRecord>()
                 .HasKey(f => f.Id);
+
+            // Настройка DailyFoodStatistics
             modelBuilder.Entity<DailyFoodStatistics>()
                 .HasKey(f => f.Id);
+
+            // Настройка Exercises
+            modelBuilder.Entity<Exercises>()
+                .HasKey(e => e.Id);
+
+            // Настройка DailyExerciseSatistics
+            modelBuilder.Entity<DailyExerciseStatistics>()
+                .HasKey(es => es.Id);
+
+            // Связи
+            modelBuilder.Entity<DailyExerciseStatistics>()
+                .HasOne(es => es.exercises) // DailyExerciseSatistics имеет одно Exercises
+                .WithMany(e => e.ExerciseSatistics) // Exercises имеет много DailyExerciseSatistics
+                .HasForeignKey(es => es.ExercisesId); // Внешний ключ в DailyExerciseSatistics
+
             base.OnModelCreating(modelBuilder);
         }
     }

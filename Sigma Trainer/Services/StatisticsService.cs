@@ -49,5 +49,48 @@ namespace Sigma_Trainer.Services
 
             return result;
         }
+        public async Task AddExerciseStatistics(int ExerciseId, int count)
+        {
+            var exercise = await _context.Exercises.FirstOrDefaultAsync(e => e.Id == ExerciseId);
+            if (exercise != null)
+            {
+                var statistics = await _context.DailyExerciseSatistics
+                    .FirstOrDefaultAsync(de => de.DateTime.Date == DateTime.Today && de.ExercisesId == ExerciseId);
+                if (statistics != null)
+                {
+                    statistics.count += count;
+                }
+                else
+                {
+                    statistics = new DailyExerciseStatistics { count = count, DateTime = DateTime.Today, exercises = exercise };
+                    _context.DailyExerciseSatistics.Add(statistics);
+                }
+                await _context.SaveChangesAsync();
+            }
+        }
+        /// <summary>
+        /// Берем статистику за days дней по данному упражнению
+        /// </summary>
+        /// <param name="ExerciseId"></param>
+        /// <param name="days"></param>
+        /// <returns></returns>
+        public async Task<DailyExerciseStatistics> GetExerciseStatistics(int ExerciseId, int days)
+        {
+            var today = DateTime.Today;
+            return await _context.DailyExerciseSatistics
+                .FirstOrDefaultAsync(es => es.ExercisesId == ExerciseId && es.DateTime <= today && es.DateTime >= today.AddDays(-days));
+        }
+        /// <summary>
+        /// Берем всю статистику по данномуу упражнению
+        /// </summary>
+        /// <param name="ExerciseId"></param>
+        /// <returns></returns>
+        public async Task<List<DailyExerciseStatistics>> GetExerciseStatistics(int ExerciseId)
+        {
+            var today = DateTime.Today;
+            var allStatistics = await _context.DailyExerciseSatistics
+                .Where(es => es.exercises.Id == ExerciseId).ToListAsync();
+            return allStatistics;
+        }
     }
 }
