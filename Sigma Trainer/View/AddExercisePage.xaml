@@ -6,18 +6,53 @@
              x:Class="Sigma_Trainer.View.AddExercisePage"
              Title="Добавить Упражнение"
              BackgroundColor="{DynamicResource PrimaryColor}">
+
     <ContentPage.Resources>
-        <Style TargetType="Entry">
+        <Style TargetType="Frame">
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="CornerRadius" Value="12"/>
             <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
-            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BorderColor" Value="{DynamicResource BorderColor}"/>
         </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="PlaceholderColor" Value="{DynamicResource TextColor2}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HeightRequest" Value="50"/>
+        </Style>
+
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
             <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
     </ContentPage.Resources>
-    <VerticalStackLayout Padding="20">
-        <Entry Placeholder="Название" Text="{Binding ExerciseName, Mode=TwoWay}"/>
-        <Button Text="Добавить" Command="{Binding AddExerciseCommand}"/>
-    </VerticalStackLayout>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20,10" Spacing="15">
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Новое упражнение" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource TextColor}"/>
+
+                    <Entry Placeholder="Название" 
+                           Text="{Binding ExerciseName, Mode=TwoWay}"/>
+
+                    <Button Text="✅ Сохранить" 
+                            Command="{Binding AddExerciseCommand}"
+                            BackgroundColor="{DynamicResource SecondaryColor}"
+                            BorderColor="{DynamicResource BorderColor}"
+                            BorderWidth="1"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

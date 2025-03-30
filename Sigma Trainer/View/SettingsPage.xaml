@@ -6,16 +6,35 @@
              x:Class="Sigma_Trainer.View.SettingsPage"
              Title="Настройки"
              BackgroundColor="{DynamicResource PrimaryColor}">
+
     <ContentPage.Resources>
         <Style TargetType="Picker">
-            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
-            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+            <Setter Property="TextColor" Value="Gray"/>
+            <Setter Property="TitleColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HeightRequest" Value="50"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         </Style>
     </ContentPage.Resources>
-    <VerticalStackLayout Padding="20">
-        <Picker ItemsSource="{Binding Themes}" 
-                SelectedItem="{Binding SelectedTheme}" 
-                Title="Выбор темы" />
-    </VerticalStackLayout>
-</ContentPage>
 
+    <ScrollView>
+        <VerticalStackLayout Padding="20,10" Spacing="15">
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Настройки темы" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource TextColor}"/>
+
+                    <Picker ItemsSource="{Binding Themes}" 
+                            SelectedItem="{Binding SelectedTheme}" 
+                            Title="Выберите тему оформления"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

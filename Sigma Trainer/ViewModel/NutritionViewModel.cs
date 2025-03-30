@@ -70,13 +70,6 @@ namespace Sigma_Trainer.ViewModel
                     new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Carbohydrates], Name = "Углеводы" }
                 };
             }
-            TitleTodayStat =
-            new LabelVisual
-            {
-                Text = "Сводка за сегодня",
-                TextSize = 25,
-                Padding = new LiveChartsCore.Drawing.Padding(15)
-            };
             // Настройка осей
             XAxes = new Axis[]
             {
