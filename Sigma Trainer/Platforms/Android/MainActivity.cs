@@ -11,9 +11,6 @@ namespace Sigma_Trainer
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Скрыть статус-бар (верхнюю панель)
-            Window.AddFlags(WindowManagerFlags.Fullscreen);
-
             // Скрыть навигационную панель (нижнюю панель)
             Window.DecorView.SystemUiVisibility = (StatusBarVisibility)(
                 SystemUiFlags.HideNavigation |
