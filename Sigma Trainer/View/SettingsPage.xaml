@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
+             x:DataType="viewmodel:SettingsViewModel"
+             x:Class="Sigma_Trainer.View.SettingsPage"
+             Title="Настройки"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="20">
+        <Picker ItemsSource="{Binding Themes}" 
+                SelectedItem="{Binding SelectedTheme}" 
+                Title="Выбор темы" />
+    </VerticalStackLayout>
+</ContentPage>
+

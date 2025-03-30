@@ -4,34 +4,28 @@
              x:Class="Sigma_Trainer.View.AddFoodRecordPage"
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              x:DataType="viewmodel:AddFoodRecordViewModel"
-             Title="AddFoodRecordPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Добавление приема пищи"
-            FontSize="24"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-
-        <Entry 
-            Placeholder="Калории (ккал)"
-            Keyboard="Numeric" 
-            Text="{Binding Calories, Mode=TwoWay}"/>
-        
-        <Entry 
-            Placeholder="Белки (г)"
-            Keyboard="Numeric" 
-            Text="{Binding Protein, Mode=TwoWay}"/>
-
-        <Entry 
-            Placeholder="Жиры (г)"
-            Keyboard="Numeric" 
-            Text="{Binding Fat, Mode=TwoWay}"/>
-
-        <Entry 
-            Placeholder="Углеводы (г)"
-            Keyboard="Numeric" 
-            Text="{Binding Carbohydrates, Mode=TwoWay}"/>
-
+             Title="Добавить Запись о Пище"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="20">
+        <Label Text="Добавление приема пищи" FontSize="24" TextColor="{DynamicResource TextColor}" HorizontalOptions="Center"/>
+        <Entry Placeholder="Калории (ккал)" Keyboard="Numeric" Text="{Binding Calories, Mode=TwoWay}"/>
+        <Entry Placeholder="Белки (г)" Keyboard="Numeric" Text="{Binding Protein, Mode=TwoWay}"/>
+        <Entry Placeholder="Жиры (г)" Keyboard="Numeric" Text="{Binding Fat, Mode=TwoWay}"/>
+        <Entry Placeholder="Углеводы (г)" Keyboard="Numeric" Text="{Binding Carbohydrates, Mode=TwoWay}"/>
         <Picker Title="Тип приема пищи" SelectedItem="{Binding SelectedMealType}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -42,11 +36,6 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-
-        <Button 
-            Text="Добавить запись" 
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            Command="{Binding AddFoodRecordCommand}"/>
+        <Button Text="Добавить запись" Command="{Binding AddFoodRecordCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

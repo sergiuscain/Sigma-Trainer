@@ -38,6 +38,9 @@ namespace Sigma_Trainer
             builder.Services.AddSingleton<AddFoodRecordViewModel>();
             builder.Services.AddSingleton<AddExercisePage>();
             builder.Services.AddSingleton<AddExerciseViewModel>();
+            builder.Services.AddSingleton<SettingsPage>();
+            builder.Services.AddSingleton<SettingsViewModel>();
+            builder.Services.AddSingleton<SettingsService>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

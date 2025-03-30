@@ -4,18 +4,21 @@
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              x:DataType="viewmodel:AddExerciseViewModel"
              x:Class="Sigma_Trainer.View.AddExercisePage"
-             Title="AddExercisePage">
-    <VerticalStackLayout>
-        <Entry 
-        Placeholder="Название"
-        Keyboard="Text" 
-        Text="{Binding ExerciseName, Mode=TwoWay}"/>
-
-        <Entry 
-        Placeholder="Описание"
-        Keyboard="Text" 
-        Text="{Binding ExerciseDescription, Mode=TwoWay}"/>
-        
+             Title="Добавить Упражнение"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="20">
+        <Entry Placeholder="Название" Text="{Binding ExerciseName, Mode=TwoWay}"/>
+        <Entry Placeholder="Описание" Text="{Binding ExerciseDescription, Mode=TwoWay}"/>
         <Button Text="Добавить" Command="{Binding AddExerciseCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

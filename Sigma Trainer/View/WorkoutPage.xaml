@@ -6,11 +6,20 @@
              xmlns:entities="clr-namespace:DBLibrary.Entities;assembly=DBLibrary"
              x:DataType="viewmodel:WorkoutViewModel"
              x:Class="Sigma_Trainer.View.WorkoutPage"
-             Title="Тренировки">
+             Title="Тренировки"
+             BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+    </ContentPage.Resources>
     <ScrollView>
-        <VerticalStackLayout>
-            <Button Text="создать упражнения"
-                    Command="{Binding AddExerciseCommand}"/>
+        <VerticalStackLayout Padding="20">
+            <Button Text="Создать упражнения" Command="{Binding AddExerciseCommand}"/>
             <CollectionView ItemsSource="{Binding Exercises}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="entities:Exercises">
@@ -26,10 +35,10 @@
             </CollectionView>
             <Frame>
                 <lvc:CartesianChart Series="{Binding Series}" 
-                            XAxes="{Binding XAxes}" 
-                            YAxes="{Binding YAxes}"
-                            HeightRequest="300" 
-                            VerticalOptions="Start"/>
+                                    XAxes="{Binding XAxes}" 
+                                    YAxes="{Binding YAxes}"
+                                    HeightRequest="300" 
+                                    VerticalOptions="Start"/>
             </Frame>
         </VerticalStackLayout>
     </ScrollView>

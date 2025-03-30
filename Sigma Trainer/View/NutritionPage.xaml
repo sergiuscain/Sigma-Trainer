@@ -6,18 +6,18 @@
              xmlns:models="clr-namespace:DBLibrary.Entities;assembly=DBLibrary"
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              x:DataType="viewmodel:NutritionViewModel"
-             Title="Питание">
+             Title="Питание"
+             BackgroundColor="{DynamicResource PrimaryColor}">
     <ContentPage.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="Medium"/>
             <Setter Property="Margin" Value="5"/>
-            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="BackgroundColor" Value="{DynamicResource Tertiary}"/>
-            <!-- Зеленый цвет -->
-            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
             <Setter Property="FontSize" Value="Medium"/>
             <Setter Property="Padding" Value="10,5"/>
             <Setter Property="CornerRadius" Value="5"/>
@@ -27,66 +27,51 @@
             <Setter Property="Padding" Value="5"/>
             <Setter Property="CornerRadius" Value="10"/>
             <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
         </Style>
 
         <Style TargetType="CollectionView">
-            <Setter Property="BackgroundColor" Value="#F9F9F9"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
         </Style>
     </ContentPage.Resources>
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="20">
             <Button Text="Добавить прием пищи" Command="{Binding AddFoodRecordCommand}"/>
-            <lvc:PieChart 
-                Series="{Binding SeriesToday}" 
-                HeightRequest="350" 
-                WidthRequest="350" 
-                Title="{Binding TitleTodayStat}" 
-                InitialRotation="-90"/>
+            <lvc:PieChart Series="{Binding SeriesToday}" HeightRequest="350" WidthRequest="350" Title="{Binding TitleTodayStat}" InitialRotation="-90"/>
             <HorizontalStackLayout>
-                <!-- Яркий зеленый - ккал -->
                 <Frame BackgroundColor="#00FF00" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="5"/>
                 <Label Text="Ккал" VerticalOptions="Center" FontSize="17"/>
-
-                <!-- Ярко-синий - белок -->
                 <Frame BackgroundColor="#0096FF" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="5"/>
                 <Label Text="Протеин" VerticalOptions="Center" FontSize="17"/>
-
-                <!-- Яркий желтый - жиры -->
                 <Frame BackgroundColor="#FFCC00" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="5"/>
                 <Label Text="Жиры" VerticalOptions="Center" FontSize="17"/>
-
-                <!-- Яркий голубой - углеводы -->
                 <Frame BackgroundColor="#0066CC" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="5"/>
                 <Label Text="Углеводы" VerticalOptions="Center" FontSize="17"/>
             </HorizontalStackLayout>
             <Frame>
-                <lvc:CartesianChart Series="{Binding Series}" 
-                                    XAxes="{Binding XAxes}" 
-                                    YAxes="{Binding YAxes}"
-                                    HeightRequest="300" 
-                                    VerticalOptions="Start"/>
+                <lvc:CartesianChart Series="{Binding Series}" XAxes="{Binding XAxes}" YAxes="{Binding YAxes}" HeightRequest="300" VerticalOptions="Start"/>
             </Frame>
             <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10">
-                <Label Text="Приемы пищи за сегодня"/>
+                <Label Text="Приемы пищи за сегодня" TextColor="{DynamicResource TextColor}"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Label FontSize="15" Margin="0"  Grid.Column="0" Grid.Row="0" Text="Дата"/>
-                <Label FontSize="15" Margin="0" Grid.Column="1" Grid.Row="0" Text="Тип приема пищи"/>
-                <Label FontSize="15" Margin="0" Grid.Column="3" Grid.Row="0" Text="Ккал"/>
-                <Label FontSize="15" Margin="0" Grid.Column="2" Grid.Row="0" Text="Протеин"/>
-                <Label FontSize="15" Margin="0" Grid.Column="4" Grid.Row="0" Text="Углеводы"/>
-                <Label FontSize="15" Margin="0" Grid.Column="5" Grid.Row="0" Text="Жиры"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Дата"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Тип приема пищи"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Ккал"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Протеин"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Углеводы"/>
+                <Label FontSize="15" Margin="0" TextColor="{DynamicResource TextColor}" Text="Жиры"/>
             </HorizontalStackLayout>
             <CollectionView ItemsSource="{Binding TodayFoodRecords}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:FoodRecord">
                         <Grid ColumnDefinitions="3*,3*,*,*,*,*">
-                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding Date}"/>
-                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding MealType}"/>
-                            <Label Grid.Column="3" Grid.Row="0" Text="{Binding Calories}"/>
-                            <Label Grid.Column="2" Grid.Row="0" Text="{Binding Protein}"/>
-                            <Label Grid.Column="4" Grid.Row="0" Text="{Binding Carbohydrates}"/>
-                            <Label Grid.Column="5" Grid.Row="0" Text="{Binding Fats}"/>
+                            <Label Grid.Column="0" Grid.Row="0" Text="{Binding Date}" TextColor="{DynamicResource TextColor}"/>
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding MealType}" TextColor="{DynamicResource TextColor}"/>
+                            <Label Grid.Column="3" Grid.Row="0" Text="{Binding Calories}" TextColor="{DynamicResource TextColor}"/>
+                            <Label Grid.Column="2" Grid.Row="0" Text="{Binding Protein}" TextColor="{DynamicResource TextColor}"/>
+                            <Label Grid.Column="4" Grid.Row="0" Text="{Binding Carbohydrates}" TextColor="{DynamicResource TextColor}"/>
+                            <Label Grid.Column="5" Grid.Row="0" Text="{Binding Fats}" TextColor="{DynamicResource TextColor}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
