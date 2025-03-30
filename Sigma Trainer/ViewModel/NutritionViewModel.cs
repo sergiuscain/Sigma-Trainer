@@ -54,12 +54,22 @@ namespace Sigma_Trainer.ViewModel
                 CreateLineSeries(FoodStatistics.Select(fs => fs.Fats).Reverse().ToArray(), "Жиры:", SeriesColors[2]),
                 CreateLineSeries(FoodStatistics.Select(fs => fs.Carbohydrates).Reverse().ToArray(), "Углеводы:", SeriesColors[3]),
             };
-            SeriesToday = new ISeries[]
+            if(FoodStatistics.FirstOrDefault(fs => fs.Date == DateTime.Today).Calories < 1)
             {
-                new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Proteins], Name = "Белки" },
-                new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Fats], Name = "Жиры" },
-                new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Carbohydrates], Name = "Углеводы" }
-            };
+                SeriesToday = new ISeries[]
+                {
+                    new PieSeries<double> { Values = [1], Name = "Вы ничего не ели сегодня" },
+                };
+            }
+            else
+            {
+                SeriesToday = new ISeries[]
+                {
+                    new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Proteins], Name = "Белки" },
+                    new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Fats], Name = "Жиры" },
+                    new PieSeries<double> { Values = [FoodStatistics.FirstOrDefault().Carbohydrates], Name = "Углеводы" }
+                };
+            }
             TitleTodayStat =
             new LabelVisual
             {

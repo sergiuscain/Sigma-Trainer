@@ -8,37 +8,108 @@
              x:Class="Sigma_Trainer.View.WorkoutPage"
              Title="Тренировки"
              BackgroundColor="{DynamicResource PrimaryColor}">
+
     <ContentPage.Resources>
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="{DynamicResource BorderColor}"/>
             <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
+
         <Style TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="BorderColor" Value="{DynamicResource BorderColor}"/>
+        </Style>
+
+        <Style x:Key="ExerciseItemStyle" TargetType="Frame">
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Padding" Value="15"/>
+        </Style>
+
+        <Style x:Key="ExerciseButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="BorderColor" Value="{DynamicResource BorderColor}"/>
+            <Setter Property="BorderWidth" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HeightRequest" Value="36"/>
         </Style>
     </ContentPage.Resources>
+
     <ScrollView>
-        <VerticalStackLayout Padding="20">
-            <Button Text="Создать упражнения" Command="{Binding AddExerciseCommand}"/>
-            <CollectionView ItemsSource="{Binding Exercises}">
+        <VerticalStackLayout Padding="20,10" Spacing="15">
+            <!-- Заголовок и кнопка добавления -->
+            <Frame BackgroundColor="{DynamicResource SecondaryColor}">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Мои упражнения" 
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"/>
+
+                    <Button Grid.Column="1" 
+                            Text="➕ Новое" 
+                            Command="{Binding AddExerciseCommand}"
+                            Style="{StaticResource ExerciseButtonStyle}"/>
+                </Grid>
+            </Frame>
+
+            <!-- Список упражнений -->
+            <CollectionView ItemsSource="{Binding Exercises}" 
+                            VerticalOptions="Start">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="entities:Exercises">
-                        <VerticalStackLayout>
-                            <Label Text="{Binding Name}"/>
-                            <Label Text="{Binding Description}"/>
-                            <Button Text="Добавить счёт"
-                                    Command="{Binding Path=BindingContext.AddScoreCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
-                                    CommandParameter="{Binding Id}"/>
-                        </VerticalStackLayout>
+                        <Frame Style="{StaticResource ExerciseItemStyle}">
+                            <Grid ColumnDefinitions="*,Auto" 
+                                  RowDefinitions="Auto,Auto"
+                                  RowSpacing="8">
+                                <!-- Название упражнения -->
+                                <Label Grid.Column="0" 
+                                       Grid.Row="0"
+                                       Text="{Binding Name}"
+                                       FontSize="16"
+                                       FontAttributes="Bold"/>
+
+                                <!-- Кнопка добавления счета -->
+                                <Button Grid.Column="1"
+                                        Grid.Row="0"
+                                        Text="Добавить счёт ➕"
+                                        Style="{StaticResource ExerciseButtonStyle}"
+                                        Command="{Binding Path=BindingContext.AddScoreCommand, 
+                                                  Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                        CommandParameter="{Binding Id}"/>
+
+                                <!-- Разделитель -->
+                                <BoxView Grid.Column="0" 
+                                         Grid.Row="1"
+                                         Grid.ColumnSpan="2"
+                                         HeightRequest="1"
+                                         BackgroundColor="{DynamicResource BorderColor}"
+                                         Margin="0,5"/>
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
+            <!-- График -->
             <Frame>
                 <lvc:CartesianChart Series="{Binding Series}" 
                                     XAxes="{Binding XAxes}" 
                                     YAxes="{Binding YAxes}"
                                     HeightRequest="300" 
-                                    VerticalOptions="Start"/>
+                                    VerticalOptions="Start"
+                                    BackgroundColor="Transparent"/>
             </Frame>
         </VerticalStackLayout>
     </ScrollView>

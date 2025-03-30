@@ -112,8 +112,21 @@ namespace Sigma_Trainer.ViewModel
             {
                 Values = values,
                 Name = name,
+                Stroke = new SolidColorPaint(SKColors.Blue) { StrokeThickness = 3 }, // Пример цвета
                 GeometrySize = 2,
             };
+        }
+        public async Task InitExercises()
+        {
+            if ((await _exerciseService.GetExercises()).Count < 1)
+            {
+                var exercise1 = new Exercises { Name = "Отжимания",};
+                var exercise2 = new Exercises { Name = "Подтягивания" };
+                var exercise3 = new Exercises { Name = "Приседания"};
+                await _exerciseService.AddExerciseAsync(exercise1);
+                await _exerciseService.AddExerciseAsync(exercise2);
+                await _exerciseService.AddExerciseAsync(exercise3);
+            }
         }
     }
 }

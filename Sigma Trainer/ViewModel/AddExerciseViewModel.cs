@@ -10,8 +10,6 @@ namespace Sigma_Trainer.ViewModel
         private readonly ExerciseService _exerciseService;
         [ObservableProperty]
         public string exerciseName;
-        [ObservableProperty]
-        public string exerciseDescription;
         public AddExerciseViewModel(ExerciseService exerciseService)
         {
             _exerciseService = exerciseService;
@@ -21,16 +19,11 @@ namespace Sigma_Trainer.ViewModel
         {
             if (!string.IsNullOrWhiteSpace(ExerciseName))
             {
-                if (string.IsNullOrWhiteSpace(ExerciseDescription))
-                {
-                    ExerciseDescription = "Описание не добавлено";
-                }
-                var exercise = new Exercises { Name = ExerciseName, Description = ExerciseDescription };
+                var exercise = new Exercises { Name = ExerciseName};
                 await _exerciseService.AddExerciseAsync(exercise);
                 await Shell.Current.GoToAsync("..");
             }
             ExerciseName = "";
-            ExerciseDescription = "";
         }
     }
 }
