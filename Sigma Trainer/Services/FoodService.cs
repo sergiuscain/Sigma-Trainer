@@ -16,7 +16,7 @@ namespace Sigma_Trainer.Services
         /// </summary>
         /// <param name="foodRecord"></param>
         /// <returns></returns>
-        public async Task AddFoodRecord(FoodRecord foodRecord)
+        public async Task AddFoodRecordAsync(FoodRecord foodRecord)
         {
             // Добавляем новый прием пищи в базу данных
             _context.FoodRecords.Add(foodRecord);
@@ -58,7 +58,7 @@ namespace Sigma_Trainer.Services
         /// Взять все приемы пищи
         /// </summary>
         /// <returns></returns>
-        public async Task<List<FoodRecord>> GetFoodRecords()
+        public async Task<List<FoodRecord>> GetFoodRecordsAsync()
         {
             var foodRecords = await _context.FoodRecords.OrderBy(fr => fr.Date).ToListAsync();
             return foodRecords;
@@ -68,7 +68,7 @@ namespace Sigma_Trainer.Services
         /// </summary>
         /// <param name="days"></param>
         /// <returns></returns>
-        public async Task<List<FoodRecord>> GetFoodRecords(int days)
+        public async Task<List<FoodRecord>> GetFoodRecordsAsync(int days)
         {
             //Сегодня
             var today = DateTime.Today;
@@ -86,7 +86,7 @@ namespace Sigma_Trainer.Services
         /// </summary>
         /// <param name="date"></param>
         /// <returns></returns>
-        public async Task<List<FoodRecord>> GetFoodRecords(DateTime date)
+        public async Task<List<FoodRecord>> GetFoodRecordsAsync(DateTime date)
         {
             DateTime startOfDay = date.Date; // Начало дня (00:00:00)
             DateTime endOfDay = startOfDay.AddDays(1).AddTicks(-1); // Конец дня (23:59:59.9999999)
@@ -119,7 +119,7 @@ namespace Sigma_Trainer.Services
         /// </summary>
         /// <param name="foodRecord"></param>
         /// <returns></returns>
-        public async Task UpdateFoodRecord(FoodRecord foodRecord)
+        public async Task UpdateFoodRecordAsync(FoodRecord foodRecord)
         {
             _context.FoodRecords.Update(foodRecord);
             await _context.SaveChangesAsync();

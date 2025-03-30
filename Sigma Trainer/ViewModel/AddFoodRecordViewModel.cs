@@ -42,7 +42,7 @@ namespace Sigma_Trainer.ViewModel
                 Date = DateTime.Now,
                 MealType = this.SelectedMealType
             };
-            await _foodService.AddFoodRecord(foodRecord);
+            await _foodService.AddFoodRecordAsync(foodRecord);
             await Shell.Current.GoToAsync("..");
         }
     }

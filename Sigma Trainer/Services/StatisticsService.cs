@@ -1,11 +1,6 @@
 ﻿using DBLibrary.Data;
 using DBLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sigma_Trainer.Services
 {
@@ -16,7 +11,7 @@ namespace Sigma_Trainer.Services
         {
             _context = context;
         }
-        public async Task<List<DailyFoodStatistics>> GetFoodStatistics(int days)
+        public async Task<List<DailyFoodStatistics>> GetFoodStatisticsAsync(int days)
         {
             var today = DateTime.Today;
 
@@ -49,7 +44,7 @@ namespace Sigma_Trainer.Services
 
             return result;
         }
-        public async Task AddExerciseStatistics(int ExerciseId, int count)
+        public async Task AddExerciseStatisticsAsync(int ExerciseId, int count)
         {
             var exercise = await _context.Exercises.FirstOrDefaultAsync(e => e.Id == ExerciseId);
             if (exercise != null)
@@ -74,7 +69,7 @@ namespace Sigma_Trainer.Services
         /// <param name="ExerciseId"></param>
         /// <param name="days"></param>
         /// <returns></returns>
-        public async Task<DailyExerciseStatistics> GetExerciseStatistics(int ExerciseId, int days)
+        public async Task<DailyExerciseStatistics> GetExerciseStatisticsAsync(int ExerciseId, int days)
         {
             var today = DateTime.Today;
             return await _context.DailyExerciseSatistics
@@ -85,7 +80,7 @@ namespace Sigma_Trainer.Services
         /// </summary>
         /// <param name="ExerciseId"></param>
         /// <returns></returns>
-        public async Task<List<DailyExerciseStatistics>> GetExerciseStatistics(int ExerciseId)
+        public async Task<List<DailyExerciseStatistics>> GetExerciseStatisticsAsync(int ExerciseId)
         {
             var today = DateTime.Today;
             var allStatistics = await _context.DailyExerciseSatistics

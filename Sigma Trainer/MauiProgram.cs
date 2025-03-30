@@ -26,6 +26,7 @@ namespace Sigma_Trainer
             builder.Services.AddDbContext<SigmaTrainerDbContext>();
             builder.Services.AddSingleton<FoodService>();
             builder.Services.AddSingleton<StatisticsService>();
+            builder.Services.AddSingleton<ExerciseService>();
             //Вкладки
             builder.Services.AddSingleton<SummaryPage>();
             builder.Services.AddSingleton<SummaryViewModel>();

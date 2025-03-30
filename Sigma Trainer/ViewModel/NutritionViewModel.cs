@@ -42,10 +42,10 @@ namespace Sigma_Trainer.ViewModel
             _statisticsService = statistics;
         }
         public async Task LoadFoodRecords() 
-            => TodayFoodRecords = new ObservableCollection<FoodRecord>(await _foodService.GetFoodRecords(DateTime.Now.Date));
+            => TodayFoodRecords = new ObservableCollection<FoodRecord>(await _foodService.GetFoodRecordsAsync(DateTime.Now.Date));
         public async Task LoadStatistics()
         {
-            FoodStatistics = new ObservableCollection<DailyFoodStatistics>(await _statisticsService.GetFoodStatistics(7));
+            FoodStatistics = new ObservableCollection<DailyFoodStatistics>(await _statisticsService.GetFoodStatisticsAsync(7));
             Dates = FoodStatistics.Select(x => x.Date.ToString("dd:MM:yyyy")).Reverse().ToList();
             Series = new ISeries[]
             {
