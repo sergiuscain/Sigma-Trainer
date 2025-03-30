@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
+             xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:DataType="viewmodel:SettingsViewModel"
              x:Class="Sigma_Trainer.View.SettingsPage"
              Title="Настройки"
@@ -33,6 +34,19 @@
                     <Picker ItemsSource="{Binding Themes}" 
                             SelectedItem="{Binding SelectedTheme}" 
                             Title="Выберите тему оформления"/>
+                </VerticalStackLayout>
+            </Frame>
+            <Frame>
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="{x:Static res:Strings.Language}" 
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="{DynamicResource TextColor}"/>
+
+                    <Picker ItemsSource="{Binding Languages}" 
+                                SelectedItem="{Binding SelectedLanguage}" 
+                                Title="Выберите язык"/>
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Sigma_Trainer.View"
+    xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
     Shell.FlyoutBehavior="Disabled"
     BackgroundColor="{DynamicResource PrimaryColor}"
     FlyoutBackgroundColor="{DynamicResource PrimaryColor}">
@@ -19,22 +20,22 @@
 
     <TabBar>
         <ShellContent
-            Title="Сводка"
+            Title="{x:Static res:Strings.Summary}"
             ContentTemplate="{DataTemplate local:SummaryPage}"
             Route="MainPage"/>
 
         <ShellContent
-            Title="Тренировки"
+            Title="{x:Static res:Strings.Workouts}"
             ContentTemplate="{DataTemplate local:WorkoutPage}"
             Route="WorkoutPage"/>
 
         <ShellContent
-            Title="Питание"
+            Title="{x:Static res:Strings.Nutrition}"
             ContentTemplate="{DataTemplate local:NutritionPage}"
             Route="NutritionPage"/>
 
         <ShellContent
-            Title="Настройки"
+            Title="{x:Static res:Strings.Settings}"
             ContentTemplate="{DataTemplate local:SettingsPage}"
             Route="SettingsPage"/>
     </TabBar>

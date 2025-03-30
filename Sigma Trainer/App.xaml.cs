@@ -1,6 +1,7 @@
 ﻿using DBLibrary.Data;
 using Sigma_Trainer.Resources.Themes;
 using Sigma_Trainer.Services;
+using System.Globalization;
 
 namespace Sigma_Trainer
 {
@@ -9,6 +10,9 @@ namespace Sigma_Trainer
         public App(SigmaTrainerDbContext context)
         {
             InitializeComponent();
+            // Установка культуры по умолчанию
+            var settingsService = new SettingsService();
+            settingsService.LoadLanguage();
             Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
             context.Database.EnsureCreated();
         }

@@ -1,4 +1,5 @@
-﻿using Sigma_Trainer.View;
+﻿using Sigma_Trainer.Resources.Languages;
+using Sigma_Trainer.View;
 
 namespace Sigma_Trainer
 {

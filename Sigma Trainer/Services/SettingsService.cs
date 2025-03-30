@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Sigma_Trainer.Model;
 using Sigma_Trainer.Resources.Themes;
+using System.Globalization;
 
 namespace Sigma_Trainer.Services
 {
@@ -99,6 +100,32 @@ namespace Sigma_Trainer.Services
             _appSettings.SelectedTheme = theme;
             var json = JsonConvert.SerializeObject(_appSettings);
             File.WriteAllText(_settingsFilePath, json);
+        }
+
+        public void SetLanguage(string language)
+        {
+            _appSettings.SelectedLanguage = language;
+            var json = JsonConvert.SerializeObject(_appSettings);
+            File.WriteAllText(_settingsFilePath, json);
+        }
+        public void LoadLanguage()
+        {
+            LoadSettings();
+            var culture = _appSettings.SelectedLanguage switch
+            {
+                "Русский" => "ru-RU",
+                "Deutsch" => "de-DE",
+                _ => "en-US"
+            };
+
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(culture);
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(culture);
+        }
+
+        public string GetLanguage()
+        {
+            LoadSettings();
+            return _appSettings.SelectedLanguage;
         }
     }
 }

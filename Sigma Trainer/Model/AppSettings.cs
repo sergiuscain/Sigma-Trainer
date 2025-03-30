@@ -9,5 +9,6 @@ namespace Sigma_Trainer.Model
     public class AppSettings
     {
         public string SelectedTheme { get; set; }
+        public string SelectedLanguage { get; set; }
     }
 }
