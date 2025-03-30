@@ -64,16 +64,47 @@ namespace Sigma_Trainer.Services
             }
         }
         /// <summary>
-        /// Берем статистику за days дней по данному упражнению
+        /// Берем статистику за days дней по данному упражнению. Если в какой-то из дней нету записей статистики, создаем её.
         /// </summary>
         /// <param name="ExerciseId"></param>
         /// <param name="days"></param>
         /// <returns></returns>
-        public async Task<DailyExerciseStatistics> GetExerciseStatisticsAsync(int ExerciseId, int days)
+        public async Task<List<DailyExerciseStatistics>> GetExerciseStatisticsAsync(int ExerciseId, int days)
         {
             var today = DateTime.Today;
-            return await _context.DailyExerciseSatistics
-                .FirstOrDefaultAsync(es => es.ExercisesId == ExerciseId && es.DateTime <= today && es.DateTime >= today.AddDays(-days));
+            var lastDay = today.AddDays(-days);
+
+            // Получаем статистику за указанный период
+            var statistics = await _context.DailyExerciseSatistics
+                .Where(es => es.ExercisesId == ExerciseId && es.DateTime <= today && es.DateTime >= lastDay)
+                .ToListAsync();
+
+            // Создаем список для всех дней в диапазоне
+            var allStatistics = new List<DailyExerciseStatistics>();
+
+            for (var date = lastDay; date <= today; date = date.AddDays(1))
+            {
+                // Проверяем, есть ли запись для текущего дня
+                var dailyStat = statistics.FirstOrDefault(es => es.DateTime.Date == date.Date);
+
+                if (dailyStat != null)
+                {
+                    // Если запись существует, добавляем её в список
+                    allStatistics.Add(dailyStat);
+                }
+                else
+                {
+                    // Если записи нет, создаем новую с нулевым значением count
+                    allStatistics.Add(new DailyExerciseStatistics
+                    {
+                        ExercisesId = ExerciseId,
+                        count = 0,
+                        DateTime = date
+                    });
+                }
+            }
+
+            return allStatistics;
         }
         /// <summary>
         /// Берем всю статистику по данномуу упражнению

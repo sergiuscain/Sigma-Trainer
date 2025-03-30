@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              xmlns:entities="clr-namespace:DBLibrary.Entities;assembly=DBLibrary"
              x:DataType="viewmodel:WorkoutViewModel"
              x:Class="Sigma_Trainer.View.WorkoutPage"
              Title="Тренировки">
-    <VerticalStackLayout>
-        <Button Text="создать упражнения"
-                Command="{Binding AddExerciseCommand}"/>
-        <Button Text="Проверить упражнения"
-        Command="{Binding GetExerciseCommand}"/>
-        <CollectionView ItemsSource="{Binding Exercises}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="entities:Exercises">
-                    <VerticalStackLayout>
-                        <Label Text="{Binding Name}"/>
-                        <Label Text="{Binding Description}"/>
-                        <Button Text="Добавить счёт"
-                                Command="{Binding Path=BindingContext.AddScoreCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
-                                CommandParameter="{Binding Id}"/>
-                    </VerticalStackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="создать упражнения"
+                    Command="{Binding AddExerciseCommand}"/>
+            <CollectionView ItemsSource="{Binding Exercises}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="entities:Exercises">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="{Binding Description}"/>
+                            <Button Text="Добавить счёт"
+                                    Command="{Binding Path=BindingContext.AddScoreCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                    CommandParameter="{Binding Id}"/>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Frame>
+                <lvc:CartesianChart Series="{Binding Series}" 
+                            XAxes="{Binding XAxes}" 
+                            YAxes="{Binding YAxes}"
+                            HeightRequest="300" 
+                            VerticalOptions="Start"/>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

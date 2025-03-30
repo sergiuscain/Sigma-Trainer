@@ -8,6 +8,7 @@ namespace Sigma_Trainer
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(AddFoodRecordPage), typeof(AddFoodRecordPage));
+            Routing.RegisterRoute(nameof(AddExercisePage), typeof(AddExercisePage));
         }
     }
 }

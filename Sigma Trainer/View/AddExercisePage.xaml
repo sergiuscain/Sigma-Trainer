@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
+             x:DataType="viewmodel:AddExerciseViewModel"
+             x:Class="Sigma_Trainer.View.AddExercisePage"
+             Title="AddExercisePage">
+    <VerticalStackLayout>
+        <Entry 
+        Placeholder="Название"
+        Keyboard="Text" 
+        Text="{Binding ExerciseName, Mode=TwoWay}"/>
+
+        <Entry 
+        Placeholder="Описание"
+        Keyboard="Text" 
+        Text="{Binding ExerciseDescription, Mode=TwoWay}"/>
+        
+        <Button Text="Добавить" Command="{Binding AddExerciseCommand}"/>
+    </VerticalStackLayout>
+</ContentPage>
