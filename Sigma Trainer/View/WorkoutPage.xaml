@@ -4,6 +4,7 @@
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              xmlns:entities="clr-namespace:DBLibrary.Entities;assembly=DBLibrary"
+             xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:DataType="viewmodel:WorkoutViewModel"
              x:Class="Sigma_Trainer.View.WorkoutPage"
              Title="Тренировки"

@@ -4,7 +4,8 @@
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              x:DataType="viewmodel:AddExerciseViewModel"
              x:Class="Sigma_Trainer.View.AddExercisePage"
-             Title="Добавить Упражнение"
+             xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
+             Title="{x:Static res:Strings.AddExercise}"
              BackgroundColor="{DynamicResource PrimaryColor}">
 
     <ContentPage.Resources>
@@ -37,16 +38,16 @@
         <VerticalStackLayout Padding="20,10" Spacing="15">
             <Frame>
                 <VerticalStackLayout Spacing="20">
-                    <Label Text="Новое упражнение" 
+                    <Label Text="{x:Static res:Strings.NewExercise}" 
                            FontSize="20"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            TextColor="{DynamicResource TextColor}"/>
 
-                    <Entry Placeholder="Название" 
+                    <Entry Placeholder="{x:Static res:Strings.Name}"
                            Text="{Binding ExerciseName, Mode=TwoWay}"/>
 
-                    <Button Text="✅ Сохранить" 
+                    <Button Text="{x:Static res:Strings.Save}"
                             Command="{Binding AddExerciseCommand}"
                             BackgroundColor="{DynamicResource SecondaryColor}"
                             BorderColor="{DynamicResource BorderColor}"

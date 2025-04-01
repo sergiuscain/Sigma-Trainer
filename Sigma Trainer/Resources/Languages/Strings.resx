@@ -117,17 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add a post" xml:space="preserve">
+    <value>🍎 Add a post</value>
+  </data>
+  <data name="AddAMeal" xml:space="preserve">
+    <value>🍴Add a meal</value>
+  </data>
+  <data name="AddExercise" xml:space="preserve">
+    <value>Add Exercise</value>
+  </data>
+  <data name="Calories (kcal)" xml:space="preserve">
+    <value>Calories (kcal)</value>
+  </data>
+  <data name="carbohydrates" xml:space="preserve">
+    <value>Carbohydrates</value>
+  </data>
+  <data name="Carbohydrates (g)" xml:space="preserve">
+    <value>Carbohydrates (g)</value>
+  </data>
+  <data name="Fats " xml:space="preserve">
+    <value>Fats </value>
+  </data>
+  <data name="Fats (g)" xml:space="preserve">
+    <value>Fats (g)</value>
+  </data>
+  <data name="Kcal" xml:space="preserve">
+    <value>Kcal</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="Meal type" xml:space="preserve">
+    <value>Meal type</value>
+  </data>
+  <data name="Meals for today" xml:space="preserve">
+    <value>Meals for today</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="New meal" xml:space="preserve">
+    <value>New meal</value>
+  </data>
+  <data name="NewExercise" xml:space="preserve">
+    <value>New exercise</value>
+  </data>
   <data name="Nutrition" xml:space="preserve">
     <value>Nutrition</value>
+  </data>
+  <data name="Proteins" xml:space="preserve">
+    <value>Proteins</value>
+  </data>
+  <data name="Proteins (g)" xml:space="preserve">
+    <value>Proteins (g)</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Summary</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Today's summary" xml:space="preserve">
+    <value>Today's summary</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Workouts</value>

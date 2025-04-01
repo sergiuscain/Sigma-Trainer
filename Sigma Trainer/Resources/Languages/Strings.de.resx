@@ -117,17 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add a post" xml:space="preserve">
+    <value>🍎 Eintrag hinzufügen</value>
+  </data>
+  <data name="AddAMeal" xml:space="preserve">
+    <value>🍴Fügen Sie eine Mahlzeit hinzu</value>
+  </data>
+  <data name="AddExercise" xml:space="preserve">
+    <value>Übung hinzufügen</value>
+  </data>
+  <data name="Calories (kcal)" xml:space="preserve">
+    <value>Kalorien (kcal)</value>
+  </data>
+  <data name="carbohydrates" xml:space="preserve">
+    <value>Kohlenhydrate</value>
+  </data>
+  <data name="Carbohydrates (g)" xml:space="preserve">
+    <value>Kohlenhydrate (g)</value>
+  </data>
+  <data name="Fats " xml:space="preserve">
+    <value>Fette</value>
+  </data>
+  <data name="Fats (g)" xml:space="preserve">
+    <value>Fett (g)</value>
+  </data>
+  <data name="Kcal" xml:space="preserve">
+    <value>Kcal</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Sprache</value>
   </data>
+  <data name="Meal type" xml:space="preserve">
+    <value>Art der Mahlzeit</value>
+  </data>
+  <data name="Meals for today" xml:space="preserve">
+    <value>Mahlzeiten für heute</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="New meal" xml:space="preserve">
+    <value>Neue Mahlzeit</value>
+  </data>
+  <data name="NewExercise" xml:space="preserve">
+    <value>Neue Übung</value>
+  </data>
   <data name="Nutrition" xml:space="preserve">
     <value>Ernährung</value>
+  </data>
+  <data name="Proteins" xml:space="preserve">
+    <value>Proteine</value>
+  </data>
+  <data name="Proteins (g)" xml:space="preserve">
+    <value>Proteine ​​(g)</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>✅Speichern</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Zusammenfassung</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Zeit</value>
+  </data>
+  <data name="Today's summary" xml:space="preserve">
+    <value>Zusammenfassung für heute</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Übungen</value>

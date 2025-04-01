@@ -117,17 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add a post" xml:space="preserve">
+    <value>🍎 Добавить запись</value>
+  </data>
+  <data name="AddAMeal" xml:space="preserve">
+    <value>🍴Добавить прием пищи</value>
+  </data>
+  <data name="AddExercise" xml:space="preserve">
+    <value>Добавить Упражнение</value>
+  </data>
+  <data name="Calories (kcal)" xml:space="preserve">
+    <value>Калории (ккал)</value>
+  </data>
+  <data name="carbohydrates" xml:space="preserve">
+    <value>Углеводы</value>
+  </data>
+  <data name="Carbohydrates (g)" xml:space="preserve">
+    <value>Углеводы (г)</value>
+  </data>
+  <data name="Fats " xml:space="preserve">
+    <value>Жиры </value>
+  </data>
+  <data name="Fats (g)" xml:space="preserve">
+    <value>Жиры (г)</value>
+  </data>
+  <data name="Kcal" xml:space="preserve">
+    <value>Ккал</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Язык</value>
   </data>
+  <data name="Meal type" xml:space="preserve">
+    <value>Тип приема пищи</value>
+  </data>
+  <data name="Meals for today" xml:space="preserve">
+    <value>Приемы пищи за сегодня</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="New meal" xml:space="preserve">
+    <value>Новый приём пищи</value>
+  </data>
+  <data name="NewExercise" xml:space="preserve">
+    <value>Новое упражнение</value>
+  </data>
   <data name="Nutrition" xml:space="preserve">
     <value>Питание</value>
+  </data>
+  <data name="Proteins" xml:space="preserve">
+    <value>Белки</value>
+  </data>
+  <data name="Proteins (g)" xml:space="preserve">
+    <value>Белки (г)</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>✅Сохранить</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Настройки</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Сводка</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Today's summary" xml:space="preserve">
+    <value>Сводка за сегодня</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Тренировки</value>

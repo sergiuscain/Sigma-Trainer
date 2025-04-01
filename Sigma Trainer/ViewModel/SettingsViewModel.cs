@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Sigma_Trainer.Resources.Languages;
 using Sigma_Trainer.Services;
 using System.Globalization;
 
@@ -53,7 +54,7 @@ namespace Sigma_Trainer.ViewModel
 
         private void UpdateUI()
         {
-            OnPropertyChanged(nameof(SelectedLanguage));
+            OnPropertyChanged(nameof(Strings));
         }
 
         [RelayCommand]

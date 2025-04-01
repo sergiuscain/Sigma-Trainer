@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:DBLibrary.Entities;assembly=DBLibrary"
+             xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:Class="Sigma_Trainer.View.AddFoodRecordPage"
              xmlns:viewmodel="clr-namespace:Sigma_Trainer.ViewModel"
              x:DataType="viewmodel:AddFoodRecordViewModel"
-             Title="Добавить Запись о Пище"
+             Title="{x:Static res:Strings.AddAMeal}"
              BackgroundColor="{DynamicResource PrimaryColor}">
 
     <ContentPage.Resources>
@@ -29,34 +30,34 @@
         <VerticalStackLayout Padding="20,10" Spacing="15">
             <Frame>
                 <VerticalStackLayout Spacing="15">
-                    <Label Text="Новый приём пищи" 
+                    <Label Text="{x:Static res:Strings.New_meal}"
                            FontSize="20"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            TextColor="{DynamicResource TextColor}"/>
 
-                    <Entry Placeholder="Калории (ккал)" 
+                    <Entry Placeholder="{x:Static res:Strings.Calories__kcal_}" 
                            Keyboard="Numeric"
                            Text="{Binding Calories, Mode=TwoWay}"/>
 
-                    <Entry Placeholder="Белки (г)" 
+                    <Entry Placeholder="{x:Static res:Strings.Proteins__g_}"
                            Keyboard="Numeric"
                            Text="{Binding Protein, Mode=TwoWay}"/>
 
-                    <Entry Placeholder="Жиры (г)" 
+                    <Entry Placeholder="{x:Static res:Strings.Fats__g_}" 
                            Keyboard="Numeric"
                            Text="{Binding Fat, Mode=TwoWay}"/>
 
-                    <Entry Placeholder="Углеводы (г)" 
+                    <Entry Placeholder="{x:Static res:Strings.Carbohydrates__g_}"
                            Keyboard="Numeric"
                            Text="{Binding Carbohydrates, Mode=TwoWay}"/>
 
-                    <Picker Title="Тип приема пищи" 
+                    <Picker Title="{x:Static res:Strings.Meal_type}"
                             SelectedItem="{Binding SelectedMealType}"
                             ItemsSource="{Binding MealTypes}"
                             ItemDisplayBinding="{Binding .}"/>
 
-                    <Button Text="🍎 Добавить запись" 
+                    <Button Text="{x:Static res:Strings.Add_a_post}"
                             Command="{Binding AddFoodRecordCommand}"
                             Margin="0,20,0,0"/>
                 </VerticalStackLayout>

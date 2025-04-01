@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Sigma_Trainer.Model;
+using Sigma_Trainer.Resources.Languages;
 using Sigma_Trainer.Resources.Themes;
 using System.Globalization;
 
