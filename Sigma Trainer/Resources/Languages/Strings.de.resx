@@ -225,4 +225,13 @@
   <data name="You haven't eaten anything today." xml:space="preserve">
     <value>Du hast heute nichts gegessen</value>
   </data>
+  <data name="Push-ups" xml:space="preserve">
+    <value>Liegestütze</value>
+  </data>
+  <data name="Pull-ups" xml:space="preserve">
+    <value>Klimmzüge</value>
+  </data>
+  <data name="Squats" xml:space="preserve">
+    <value>Kniebeugen</value>
+  </data>
 </root>

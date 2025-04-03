@@ -225,4 +225,13 @@
   <data name="You haven't eaten anything today." xml:space="preserve">
     <value>You haven't eaten anything today.</value>
   </data>
+  <data name="Push-ups" xml:space="preserve">
+    <value>Push-ups</value>
+  </data>
+  <data name="Pull-ups" xml:space="preserve">
+    <value>Pull-ups</value>
+  </data>
+  <data name="Squats" xml:space="preserve">
+    <value>Squats</value>
+  </data>
 </root>

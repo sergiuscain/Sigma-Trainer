@@ -16,9 +16,12 @@ namespace Sigma_Trainer.ViewModel
 
         [ObservableProperty]
         private string selectedLanguage;
-
-        public SettingsViewModel()
+        private readonly SettingsService _settingsService;
+        private readonly ExerciseService _exerciseService;
+        public SettingsViewModel(SettingsService settingsService, ExerciseService exerciseService)
         {
+            _settingsService = settingsService;
+            _exerciseService = exerciseService;
             Themes = new List<string> { "Светлая", "Темная", "Космос" };
             Languages = new List<string> { "Русский", "English", "Deutsch" };
             LoadCurrentLanguage(); // Загрузка текущего языка из настроек
@@ -26,9 +29,8 @@ namespace Sigma_Trainer.ViewModel
 
         private void LoadCurrentLanguage()
         {
-            var settingsService = new SettingsService();
-            settingsService.LoadLanguage(); // Загружаем язык из настроек
-            selectedLanguage = settingsService.GetLanguage(); // Получаем текущий язык
+            _settingsService.LoadLanguage(); // Загружаем язык из настроек
+            selectedLanguage = _settingsService.GetLanguage(); // Получаем текущий язык
         }
 
         [RelayCommand]
@@ -48,6 +50,18 @@ namespace Sigma_Trainer.ViewModel
             var settingsService = new SettingsService();
             settingsService.SetLanguage(selectedLanguage);
 
+            //Переименовываем базовые упражнения
+            var pullUp = _exerciseService.GetExerciseAsync("Pull-ups", "Подтягивания", "Klimmzüge").Result;
+            if (pullUp != null)
+                _exerciseService.RenameExerciseAsync(pullUp.Id, Strings.Pull_ups).Wait();
+
+            var Push_ups = _exerciseService.GetExerciseAsync("Push-ups", "Отжимания", "Liegestütze").Result;
+            if (Push_ups != null)
+                _exerciseService.RenameExerciseAsync(Push_ups.Id, Strings.Push_ups).Wait();
+
+            var Squats = _exerciseService.GetExerciseAsync("Squats", "Приседания", "Kniebeugen").Result;
+            if (Squats != null)
+                _exerciseService.RenameExerciseAsync(Squats.Id, Strings.Squats).Wait();
 
             // Обновление интерфейса
             UpdateUI();

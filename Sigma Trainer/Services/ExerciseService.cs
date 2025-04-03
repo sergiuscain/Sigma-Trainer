@@ -34,6 +34,14 @@ namespace Sigma_Trainer.Services
         {
             return await _context.Exercises.FirstOrDefaultAsync(e => e.Id == exerciseID);
         }
+        public async Task<Exercises> GetExerciseAsync(string name)
+        {
+            return await _context.Exercises.FirstOrDefaultAsync(x => x.Name == name);
+        }
+        public async Task<Exercises> GetExerciseAsync(string name1, string name2, string name3)
+        {
+            return await _context.Exercises.FirstOrDefaultAsync(x => x.Name == name1 || x.Name == name2 || x.Name == name3);
+        }
         public async Task<List<Exercises>> GetExercises()
         {
             return await _context.Exercises.ToListAsync();

@@ -277,6 +277,24 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pull-ups.
+        /// </summary>
+        internal static string Pull_ups {
+            get {
+                return ResourceManager.GetString("Pull-ups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Push-ups.
+        /// </summary>
+        internal static string Push_ups {
+            get {
+                return ResourceManager.GetString("Push-ups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string Save {
@@ -318,6 +336,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Snack {
             get {
                 return ResourceManager.GetString("Snack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Squats.
+        /// </summary>
+        internal static string Squats {
+            get {
+                return ResourceManager.GetString("Squats", resourceCulture);
             }
         }
         

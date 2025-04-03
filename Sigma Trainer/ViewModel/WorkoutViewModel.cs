@@ -4,6 +4,7 @@ using DBLibrary.Entities;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
+using Sigma_Trainer.Resources.Languages;
 using Sigma_Trainer.Services;
 using Sigma_Trainer.View;
 using SkiaSharp;
@@ -134,9 +135,9 @@ namespace Sigma_Trainer.ViewModel
         {
             if ((await _exerciseService.GetExercises()).Count < 1)
             {
-                var exercise1 = new Exercises { Name = "Отжимания",};
-                var exercise2 = new Exercises { Name = "Подтягивания" };
-                var exercise3 = new Exercises { Name = "Приседания"};
+                var exercise1 = new Exercises { Name = Strings.Push_ups};
+                var exercise2 = new Exercises { Name = Strings.Pull_ups};
+                var exercise3 = new Exercises { Name = Strings.Squats};
                 await _exerciseService.AddExerciseAsync(exercise1);
                 await _exerciseService.AddExerciseAsync(exercise2);
                 await _exerciseService.AddExerciseAsync(exercise3);
