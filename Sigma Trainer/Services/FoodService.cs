@@ -1,6 +1,7 @@
 ﻿using DBLibrary.Data;
 using DBLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Sigma_Trainer.Services
 {
@@ -123,6 +124,33 @@ namespace Sigma_Trainer.Services
         {
             _context.FoodRecords.Update(foodRecord);
             await _context.SaveChangesAsync();
+        }
+        public async Task TranslateMealType(string lunch, string breakfast, string dinner, string snack)
+        {
+            var foodRecords = await _context.FoodRecords.ToListAsync(); // Загрузка записей в память
+
+            foreach (var fr in foodRecords)
+            {
+                // Заменяем значения MealType в зависимости от текущего значения
+                if (fr.MealType == "Lunch" || fr.MealType == "Mittagessen" || fr.MealType == "Обед")
+                {
+                    fr.MealType = lunch; // Устанавливаем значение переменной lunch
+                }
+                else if (fr.MealType == "Breakfast" || fr.MealType == "Frühstück" || fr.MealType == "Завтрак")
+                {
+                    fr.MealType = breakfast; // Устанавливаем значение переменной breakfast
+                }
+                else if (fr.MealType == "Dinner" || fr.MealType == "Abendessen" || fr.MealType == "Ужин")
+                {
+                    fr.MealType = dinner; // Устанавливаем значение переменной dinner
+                }
+                else if (fr.MealType == "Snack" || fr.MealType == "Перекус")
+                {
+                    fr.MealType = snack; // Устанавливаем значение переменной snack
+                }
+            }
+
+            await _context.SaveChangesAsync(); // Сохранение изменений в базе данных
         }
     }
 }

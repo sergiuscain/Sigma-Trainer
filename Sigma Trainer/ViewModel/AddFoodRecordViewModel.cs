@@ -28,8 +28,8 @@ namespace Sigma_Trainer.ViewModel
 
         public List<string> MealTypes { get; } = new List<string>
         {
-            Strings.breakfast,
-            Strings.lunch_,
+            Strings.Breakfast,
+            Strings.Lunch_,
             Strings.dinner,
             Strings.Snack
         };
@@ -44,18 +44,21 @@ namespace Sigma_Trainer.ViewModel
         [RelayCommand]
         public async Task AddFoodRecord()
         {
-            var foodRecord = new FoodRecord
+            if( selectedMealType != null)
             {
-                Calories = this.Calories,
-                Carbohydrates = this.Carbohydrates,
-                Fats = this.Fat,
-                Protein = this.Protein,
-                Date = DateTime.Now,
-                MealType = SelectedMealType // Конвертация в enum
-            };
+                var foodRecord = new FoodRecord
+                {
+                    Calories = this.Calories,
+                    Carbohydrates = this.Carbohydrates,
+                    Fats = this.Fat,
+                    Protein = this.Protein,
+                    Date = DateTime.Now,
+                    MealType = SelectedMealType // Конвертация в enum
+                };
 
-            await _foodService.AddFoodRecordAsync(foodRecord);
-            await Shell.Current.GoToAsync("..");
+                await _foodService.AddFoodRecordAsync(foodRecord);
+                await Shell.Current.GoToAsync("..");
+            }
         }
     }
 }

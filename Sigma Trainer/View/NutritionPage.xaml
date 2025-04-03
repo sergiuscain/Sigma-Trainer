@@ -40,13 +40,13 @@
 
                     <FlexLayout Wrap="Wrap" AlignItems="Center" JustifyContent="Center">
                         <Frame BackgroundColor="#00FF00" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="2"/>
-                        <Label Text="{x:Static res:Strings.Kcal}" VerticalOptions="Center" FontSize="15"/>
+                        <Label Text="{x:Static res:Strings.Kcal}" VerticalOptions="Center" FontSize="13"/>
                         <Frame BackgroundColor="#0096FF" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="2"/>
-                        <Label Text="{x:Static res:Strings.Proteins}" VerticalOptions="Center" FontSize="15"/>
+                        <Label Text="{x:Static res:Strings.Proteins}" VerticalOptions="Center" FontSize="13"/>
                         <Frame BackgroundColor="#FFCC00" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="2"/>
-                        <Label Text="{x:Static res:Strings.Fats_}" VerticalOptions="Center" FontSize="15"/>
+                        <Label Text="{x:Static res:Strings.Fats_}" VerticalOptions="Center" FontSize="13"/>
                         <Frame BackgroundColor="#0066CC" WidthRequest="20" HeightRequest="20" CornerRadius="10" Margin="2"/>
-                        <Label Text="{x:Static res:Strings.carbohydrates}" VerticalOptions="Center" FontSize="15"/>
+                        <Label Text="{x:Static res:Strings.carbohydrates}" VerticalOptions="Center" FontSize="13"/>
                     </FlexLayout>
                 </VerticalStackLayout>
             </Frame>

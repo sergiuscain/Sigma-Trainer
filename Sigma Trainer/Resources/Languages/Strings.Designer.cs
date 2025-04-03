@@ -99,9 +99,9 @@ namespace Sigma_Trainer.Resources.Languages {
         /// <summary>
         ///   Looks up a localized string similar to Breakfast.
         /// </summary>
-        internal static string breakfast {
+        internal static string Breakfast {
             get {
-                return ResourceManager.GetString("breakfast", resourceCulture);
+                return ResourceManager.GetString("Breakfast", resourceCulture);
             }
         }
         
@@ -207,9 +207,9 @@ namespace Sigma_Trainer.Resources.Languages {
         /// <summary>
         ///   Looks up a localized string similar to Lunch.
         /// </summary>
-        internal static string lunch_ {
+        internal static string Lunch_ {
             get {
-                return ResourceManager.GetString("lunch ", resourceCulture);
+                return ResourceManager.GetString("Lunch ", resourceCulture);
             }
         }
         

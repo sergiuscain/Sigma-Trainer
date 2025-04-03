@@ -129,7 +129,7 @@
   <data name="AddExercise" xml:space="preserve">
     <value>Добавить Упражнение</value>
   </data>
-  <data name="breakfast" xml:space="preserve">
+  <data name="Breakfast" xml:space="preserve">
     <value>Завтрак</value>
   </data>
   <data name="Calories (kcal)" xml:space="preserve">
@@ -141,7 +141,7 @@
   <data name="Carbohydrates (g)" xml:space="preserve">
     <value>Углеводы (г)</value>
   </data>
-  <data name="lunch " xml:space="preserve">
+  <data name="Lunch " xml:space="preserve">
     <value>Обед</value>
   </data>
   <data name="Fats " xml:space="preserve">
@@ -217,7 +217,7 @@
     <value>Тренировки</value>
   </data>
   <data name="dinner" xml:space="preserve">
-    <value>ужин</value>
+    <value>Ужин</value>
   </data>
   <data name="Snack" xml:space="preserve">
     <value>Перекус</value>

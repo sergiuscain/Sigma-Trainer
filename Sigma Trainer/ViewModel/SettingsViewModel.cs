@@ -18,10 +18,12 @@ namespace Sigma_Trainer.ViewModel
         private string selectedLanguage;
         private readonly SettingsService _settingsService;
         private readonly ExerciseService _exerciseService;
-        public SettingsViewModel(SettingsService settingsService, ExerciseService exerciseService)
+        private readonly FoodService _foodService;
+        public SettingsViewModel(SettingsService settingsService, ExerciseService exerciseService, FoodService foodService)
         {
             _settingsService = settingsService;
             _exerciseService = exerciseService;
+            _foodService = foodService;
             Themes = new List<string> { "Светлая", "Темная", "Космос" };
             Languages = new List<string> { "Русский", "English", "Deutsch" };
             LoadCurrentLanguage(); // Загрузка текущего языка из настроек
@@ -62,6 +64,9 @@ namespace Sigma_Trainer.ViewModel
             var Squats = _exerciseService.GetExerciseAsync("Squats", "Приседания", "Kniebeugen").Result;
             if (Squats != null)
                 _exerciseService.RenameExerciseAsync(Squats.Id, Strings.Squats).Wait();
+
+            //Переименовываем записи статистики. 
+            _foodService.TranslateMealType(Strings.Lunch_, Strings.Breakfast, Strings.dinner, Strings.Snack).Wait();
 
             // Обновление интерфейса
             UpdateUI();
