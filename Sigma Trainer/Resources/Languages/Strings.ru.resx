@@ -234,4 +234,19 @@
   <data name="Squats" xml:space="preserve">
     <value>Приседания</value>
   </data>
+  <data name="Rename exercise" xml:space="preserve">
+    <value>Переименовать упражнение</value>
+  </data>
+  <data name="Enter a new name" xml:space="preserve">
+    <value>Введите новое название:</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Enter the number of points:" xml:space="preserve">
+    <value>Введите количество очков:</value>
+  </data>
 </root>

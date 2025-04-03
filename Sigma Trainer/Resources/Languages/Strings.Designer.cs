@@ -115,6 +115,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Carbohydrates.
         /// </summary>
         internal static string carbohydrates {
@@ -138,6 +147,24 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string dinner {
             get {
                 return ResourceManager.GetString("dinner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a new name:.
+        /// </summary>
+        internal static string Enter_a_new_name {
+            get {
+                return ResourceManager.GetString("Enter a new name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the number of points:.
+        /// </summary>
+        internal static string Enter_the_number_of_points_ {
+            get {
+                return ResourceManager.GetString("Enter the number of points:", resourceCulture);
             }
         }
         
@@ -259,6 +286,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Proteins.
         /// </summary>
         internal static string Proteins {
@@ -291,6 +327,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Push_ups {
             get {
                 return ResourceManager.GetString("Push-ups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rename exercise.
+        /// </summary>
+        internal static string Rename_exercise {
+            get {
+                return ResourceManager.GetString("Rename exercise", resourceCulture);
             }
         }
         

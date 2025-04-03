@@ -38,10 +38,10 @@ namespace Sigma_Trainer.ViewModel
         [RelayCommand]
         public async Task AddScore(int exerciseId)
         {
-            var result = await Application.Current.MainPage.DisplayPromptAsync("Добавить счёт",
-                "Введите количество очков:",
-                "OK",
-                "Отмена",
+            var result = await Application.Current.MainPage.DisplayPromptAsync(Strings.Add_a_score,
+                Strings.Enter_the_number_of_points_,
+                Strings.OK,
+                Strings.Cancel,
                 keyboard: Keyboard.Numeric);
             // Проверяем, что пользователь ввёл значение и оно корректно преобразуется в число
             if (result != null && int.TryParse(result, out int score))
@@ -56,10 +56,10 @@ namespace Sigma_Trainer.ViewModel
         [RelayCommand]
         public async Task EditExercise(int exerciseId)
         {
-            var newName = await Application.Current.MainPage.DisplayPromptAsync("Переименовать упражнение",
-                "Введите новое название:",
-                "OK",
-                "Отмена",
+            var newName = await Application.Current.MainPage.DisplayPromptAsync(Strings.Rename_exercise,
+                Strings.Enter_a_new_name,
+                Strings.OK,
+                Strings.Cancel,
                 keyboard: Keyboard.Text);
             // Проверяем, что пользователь ввёл значение и оно корректно преобразуется в число
             if (newName != null)

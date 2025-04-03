@@ -234,4 +234,19 @@
   <data name="Squats" xml:space="preserve">
     <value>Kniebeugen</value>
   </data>
+  <data name="Rename exercise" xml:space="preserve">
+    <value>Übung umbenennen</value>
+  </data>
+  <data name="Enter a new name" xml:space="preserve">
+    <value>Geben Sie einen neuen Namen ein:</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Stornieren</value>
+  </data>
+  <data name="Enter the number of points:" xml:space="preserve">
+    <value>Geben Sie die Anzahl der Punkte ein:</value>
+  </data>
 </root>
