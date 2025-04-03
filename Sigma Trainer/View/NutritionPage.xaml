@@ -15,12 +15,8 @@
             <Setter Property="BackgroundColor" Value="Transparent"/>
         </Style>
 
-        <Style x:Key="LegendItemStyle" TargetType="Frame">
-            <Setter Property="Padding" Value="8"/>
-            <Setter Property="CornerRadius" Value="8"/>
-            <Setter Property="HeightRequest" Value="30"/>
-            <Setter Property="WidthRequest" Value="30"/>
-            <Setter Property="HasShadow" Value="False"/>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
         </Style>
         <Style TargetType="Label">
             <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
@@ -54,7 +50,13 @@
                     </FlexLayout>
                 </VerticalStackLayout>
             </Frame>
-
+            <Frame>
+                <lvc:CartesianChart Series="{Binding Series}" 
+                            XAxes="{Binding XAxes}" 
+                            YAxes="{Binding YAxes}"
+                            HeightRequest="300" 
+                            VerticalOptions="Start" />
+            </Frame>
             <!-- Список записей -->
             <Frame BackgroundColor="{DynamicResource SecondaryColor}">
                 <VerticalStackLayout Spacing="10">

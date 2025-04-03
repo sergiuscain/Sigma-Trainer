@@ -129,6 +129,9 @@
   <data name="AddExercise" xml:space="preserve">
     <value>Add Exercise</value>
   </data>
+  <data name="breakfast" xml:space="preserve">
+    <value>Breakfast</value>
+  </data>
   <data name="Calories (kcal)" xml:space="preserve">
     <value>Calories (kcal)</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="Carbohydrates (g)" xml:space="preserve">
     <value>Carbohydrates (g)</value>
+  </data>
+  <data name="lunch " xml:space="preserve">
+    <value>Lunch</value>
   </data>
   <data name="Fats " xml:space="preserve">
     <value>Fats </value>
@@ -209,5 +215,14 @@
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Workouts</value>
+  </data>
+  <data name="dinner" xml:space="preserve">
+    <value>Dinner</value>
+  </data>
+  <data name="Snack" xml:space="preserve">
+    <value>Snack</value>
+  </data>
+  <data name="You haven't eaten anything today." xml:space="preserve">
+    <value>You haven't eaten anything today.</value>
   </data>
 </root>

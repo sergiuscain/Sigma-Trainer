@@ -43,5 +43,15 @@ namespace Sigma_Trainer.Services
             _context.Exercises.Update(exercises);
             await _context.SaveChangesAsync();
         }
+
+        public async Task RenameExerciseAsync(int exerciseId, string newName)
+        {
+            var exercise = _context.Exercises.FirstOrDefault(e => e.Id == exerciseId);
+            if (exercise != null)
+            {
+                exercise.Name = newName;
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -45,6 +45,7 @@
             <Setter Property="BorderWidth" Value="1"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="HeightRequest" Value="36"/>
+            <Setter Property="Margin" Value="3"/>
         </Style>
     </ContentPage.Resources>
 
@@ -71,7 +72,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="entities:Exercises">
                         <Frame Style="{StaticResource ExerciseItemStyle}">
-                            <Grid ColumnDefinitions="*,Auto" 
+                            <Grid ColumnDefinitions="*,Auto, Auto" 
                                   RowDefinitions="Auto,Auto"
                                   RowSpacing="8">
                                 <!-- Название упражнения -->
@@ -80,7 +81,14 @@
                                        Text="{Binding Name}"
                                        FontSize="16"
                                        FontAttributes="Bold"/>
-
+                                <!-- Кнопка добавления счета -->
+                                <Button Grid.Column="2"
+                                        Grid.Row="0"
+                                        Text="✏️"
+                                        Style="{StaticResource ExerciseButtonStyle}"
+                                        Command="{Binding Path=BindingContext.EditExerciseCommand, 
+                                                  Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                        CommandParameter="{Binding Id}"/>
                                 <!-- Кнопка добавления счета -->
                                 <Button Grid.Column="1"
                                         Grid.Row="0"

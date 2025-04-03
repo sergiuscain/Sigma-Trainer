@@ -121,13 +121,16 @@
     <value>🍎 Добавить запись</value>
   </data>
   <data name="Add a score" xml:space="preserve">
-    <value>Add an account➕</value>
+    <value>Добавить счёт➕</value>
   </data>
   <data name="AddAMeal" xml:space="preserve">
     <value>🍴Добавить прием пищи</value>
   </data>
   <data name="AddExercise" xml:space="preserve">
     <value>Добавить Упражнение</value>
+  </data>
+  <data name="breakfast" xml:space="preserve">
+    <value>Завтрак</value>
   </data>
   <data name="Calories (kcal)" xml:space="preserve">
     <value>Калории (ккал)</value>
@@ -138,6 +141,9 @@
   <data name="Carbohydrates (g)" xml:space="preserve">
     <value>Углеводы (г)</value>
   </data>
+  <data name="lunch " xml:space="preserve">
+    <value>Обед</value>
+  </data>
   <data name="Fats " xml:space="preserve">
     <value>Жиры </value>
   </data>
@@ -145,7 +151,7 @@
     <value>Жиры (г)</value>
   </data>
   <data name="Kcal" xml:space="preserve">
-    <value>Ккал</value>
+    <value>Ккал (г)</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Язык</value>
@@ -209,5 +215,14 @@
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Тренировки</value>
+  </data>
+  <data name="dinner" xml:space="preserve">
+    <value>ужин</value>
+  </data>
+  <data name="Snack" xml:space="preserve">
+    <value>Перекус</value>
+  </data>
+  <data name="You haven't eaten anything today." xml:space="preserve">
+    <value>Вы ничего не ели сегодня</value>
   </data>
 </root>

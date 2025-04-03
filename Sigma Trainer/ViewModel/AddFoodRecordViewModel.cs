@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DBLibrary.Entities;
+using Sigma_Trainer.Resources.Languages;
 using Sigma_Trainer.Services;
 
 namespace Sigma_Trainer.ViewModel
@@ -27,10 +28,10 @@ namespace Sigma_Trainer.ViewModel
 
         public List<string> MealTypes { get; } = new List<string>
         {
-            "Завтрак",
-            "Обед",
-            "Ужин",
-            "Перекус"
+            Strings.breakfast,
+            Strings.lunch_,
+            Strings.dinner,
+            Strings.Snack
         };
 
         public AddFoodRecordViewModel(FoodService foodService, StatisticsService statisticsService)
@@ -50,7 +51,7 @@ namespace Sigma_Trainer.ViewModel
                 Fats = this.Fat,
                 Protein = this.Protein,
                 Date = DateTime.Now,
-                MealType = Enum.Parse<MealType>(SelectedMealType) // Конвертация в enum
+                MealType = SelectedMealType // Конвертация в enum
             };
 
             await _foodService.AddFoodRecordAsync(foodRecord);

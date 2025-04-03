@@ -48,10 +48,24 @@ namespace Sigma_Trainer.ViewModel
                 if (score > 0)
                 {
                     await _statisticsService.AddExerciseStatisticsAsync(exerciseId, score);
-
-                    var r = await _statisticsService.GetExerciseStatisticsAsync(exerciseId);
                     await LoadStatistics();
                 }
+            }
+        }
+        [RelayCommand]
+        public async Task EditExercise(int exerciseId)
+        {
+            var newName = await Application.Current.MainPage.DisplayPromptAsync("Переименовать упражнение",
+                "Введите новое название:",
+                "OK",
+                "Отмена",
+                keyboard: Keyboard.Text);
+            // Проверяем, что пользователь ввёл значение и оно корректно преобразуется в число
+            if (newName != null)
+            {
+                await _exerciseService.RenameExerciseAsync(exerciseId, newName);
+                await UpdateExerciseList();
+                await LoadStatistics();
             }
         }
         public async Task UpdateExerciseList()

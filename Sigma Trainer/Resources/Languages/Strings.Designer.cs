@@ -97,6 +97,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Breakfast.
+        /// </summary>
+        internal static string breakfast {
+            get {
+                return ResourceManager.GetString("breakfast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Calories (kcal).
         /// </summary>
         internal static string Calories__kcal_ {
@@ -120,6 +129,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Carbohydrates__g_ {
             get {
                 return ResourceManager.GetString("Carbohydrates (g)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dinner.
+        /// </summary>
+        internal static string dinner {
+            get {
+                return ResourceManager.GetString("dinner", resourceCulture);
             }
         }
         
@@ -156,6 +174,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lunch.
+        /// </summary>
+        internal static string lunch_ {
+            get {
+                return ResourceManager.GetString("lunch ", resourceCulture);
             }
         }
         
@@ -286,6 +313,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Snack.
+        /// </summary>
+        internal static string Snack {
+            get {
+                return ResourceManager.GetString("Snack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Summary.
         /// </summary>
         internal static string Summary {
@@ -336,6 +372,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Workouts {
             get {
                 return ResourceManager.GetString("Workouts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You haven&apos;t eaten anything today..
+        /// </summary>
+        internal static string You_haven_t_eaten_anything_today_ {
+            get {
+                return ResourceManager.GetString("You haven\'t eaten anything today.", resourceCulture);
             }
         }
     }

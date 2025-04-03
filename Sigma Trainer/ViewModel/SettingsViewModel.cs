@@ -48,6 +48,7 @@ namespace Sigma_Trainer.ViewModel
             var settingsService = new SettingsService();
             settingsService.SetLanguage(selectedLanguage);
 
+
             // Обновление интерфейса
             UpdateUI();
         }
