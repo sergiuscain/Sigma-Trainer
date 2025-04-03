@@ -249,4 +249,13 @@
   <data name="Enter the number of points:" xml:space="preserve">
     <value>Enter the number of points:</value>
   </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
 </root>

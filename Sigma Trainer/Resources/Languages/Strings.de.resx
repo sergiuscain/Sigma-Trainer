@@ -249,4 +249,13 @@
   <data name="Enter the number of points:" xml:space="preserve">
     <value>Geben Sie die Anzahl der Punkte ein:</value>
   </data>
+  <data name="Light" xml:space="preserve">
+    <value>Hell</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dunkel</value>
+  </data>
+  <data name="Space" xml:space="preserve">
+    <value>Raum</value>
+  </data>
 </root>

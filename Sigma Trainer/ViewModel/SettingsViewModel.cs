@@ -24,7 +24,7 @@ namespace Sigma_Trainer.ViewModel
             _settingsService = settingsService;
             _exerciseService = exerciseService;
             _foodService = foodService;
-            Themes = new List<string> { "Светлая", "Темная", "Космос" };
+            Themes = new List<string> { Strings.Light, Strings.Dark, Strings.Space };
             Languages = new List<string> { "Русский", "English", "Deutsch" };
             LoadCurrentLanguage(); // Загрузка текущего языка из настроек
         }

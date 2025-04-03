@@ -249,4 +249,13 @@
   <data name="Enter the number of points:" xml:space="preserve">
     <value>Введите количество очков:</value>
   </data>
+  <data name="Light" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Темная</value>
+  </data>
+  <data name="Space" xml:space="preserve">
+    <value>Космос</value>
+  </data>
 </root>
