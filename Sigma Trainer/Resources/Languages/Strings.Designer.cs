@@ -70,6 +70,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add a score ➕.
+        /// </summary>
+        internal static string Add_a_score {
+            get {
+                return ResourceManager.GetString("Add a score", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 🍴Add a meal.
         /// </summary>
         internal static string AddAMeal {
@@ -169,11 +178,29 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My exercises.
+        /// </summary>
+        internal static string My_exercises {
+            get {
+                return ResourceManager.GetString("My exercises", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ➕ New.
+        /// </summary>
+        internal static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
             }
         }
         
@@ -232,6 +259,24 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select a theme.
+        /// </summary>
+        internal static string Select_a_theme {
+            get {
+                return ResourceManager.GetString("Select a theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select language and restart applications to apply!.
+        /// </summary>
+        internal static string Select_language {
+            get {
+                return ResourceManager.GetString("Select language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string Settings {
@@ -246,6 +291,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Summary {
             get {
                 return ResourceManager.GetString("Summary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme settings.
+        /// </summary>
+        internal static string Theme_settings {
+            get {
+                return ResourceManager.GetString("Theme settings", resourceCulture);
             }
         }
         

@@ -120,6 +120,9 @@
   <data name="Add a post" xml:space="preserve">
     <value>🍎 Eintrag hinzufügen</value>
   </data>
+  <data name="Add a score" xml:space="preserve">
+    <value>Punkte hinzufügen➕</value>
+  </data>
   <data name="AddAMeal" xml:space="preserve">
     <value>🍴Fügen Sie eine Mahlzeit hinzu</value>
   </data>
@@ -153,8 +156,14 @@
   <data name="Meals for today" xml:space="preserve">
     <value>Mahlzeiten für heute</value>
   </data>
+  <data name="My exercises" xml:space="preserve">
+    <value>Meine Übungen</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>➕ Neu</value>
   </data>
   <data name="New meal" xml:space="preserve">
     <value>Neue Mahlzeit</value>
@@ -174,11 +183,20 @@
   <data name="Save" xml:space="preserve">
     <value>✅Speichern</value>
   </data>
+  <data name="Select a theme" xml:space="preserve">
+    <value>Wählen Sie ein Thema aus</value>
+  </data>
+  <data name="Select language" xml:space="preserve">
+    <value>Wählen Sie die Sprache aus und starten Sie die Anwendungen neu, um sie anzuwenden!</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Zusammenfassung</value>
+  </data>
+  <data name="Theme settings" xml:space="preserve">
+    <value>Theme-Einstellungen</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Zeit</value>

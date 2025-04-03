@@ -120,6 +120,9 @@
   <data name="Add a post" xml:space="preserve">
     <value>🍎 Add a post</value>
   </data>
+  <data name="Add a score" xml:space="preserve">
+    <value>Add a score ➕</value>
+  </data>
   <data name="AddAMeal" xml:space="preserve">
     <value>🍴Add a meal</value>
   </data>
@@ -153,8 +156,14 @@
   <data name="Meals for today" xml:space="preserve">
     <value>Meals for today</value>
   </data>
+  <data name="My exercises" xml:space="preserve">
+    <value>My exercises</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>➕ New</value>
   </data>
   <data name="New meal" xml:space="preserve">
     <value>New meal</value>
@@ -174,11 +183,20 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Select a theme" xml:space="preserve">
+    <value>Select a theme</value>
+  </data>
+  <data name="Select language" xml:space="preserve">
+    <value>Select language and restart applications to apply!</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Summary</value>
+  </data>
+  <data name="Theme settings" xml:space="preserve">
+    <value>Theme settings</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Time</value>

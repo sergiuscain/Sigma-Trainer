@@ -5,7 +5,7 @@
              xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:DataType="viewmode:SummaryViewModel"
              x:Class="Sigma_Trainer.View.SummaryPage"
-             Title="Сводка"
+             Title="{x:Static res:Strings.Summary}"
              BackgroundColor="{DynamicResource PrimaryColor}">
 
     <ScrollView>

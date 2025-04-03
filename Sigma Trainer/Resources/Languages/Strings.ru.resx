@@ -120,6 +120,9 @@
   <data name="Add a post" xml:space="preserve">
     <value>🍎 Добавить запись</value>
   </data>
+  <data name="Add a score" xml:space="preserve">
+    <value>Add an account➕</value>
+  </data>
   <data name="AddAMeal" xml:space="preserve">
     <value>🍴Добавить прием пищи</value>
   </data>
@@ -153,8 +156,14 @@
   <data name="Meals for today" xml:space="preserve">
     <value>Приемы пищи за сегодня</value>
   </data>
+  <data name="My exercises" xml:space="preserve">
+    <value>Мои упражнения</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Название</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>➕ Новое</value>
   </data>
   <data name="New meal" xml:space="preserve">
     <value>Новый приём пищи</value>
@@ -174,11 +183,20 @@
   <data name="Save" xml:space="preserve">
     <value>✅Сохранить</value>
   </data>
+  <data name="Select a theme" xml:space="preserve">
+    <value>Выберите тему оформления</value>
+  </data>
+  <data name="Select language" xml:space="preserve">
+    <value>Выберите язык и перезапустите приложения для применения!</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Настройки</value>
   </data>
   <data name="Summary" xml:space="preserve">
     <value>Сводка</value>
+  </data>
+  <data name="Theme settings" xml:space="preserve">
+    <value>Настройки темы</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Время</value>

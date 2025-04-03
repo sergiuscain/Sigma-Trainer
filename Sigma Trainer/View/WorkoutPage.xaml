@@ -7,7 +7,7 @@
              xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:DataType="viewmodel:WorkoutViewModel"
              x:Class="Sigma_Trainer.View.WorkoutPage"
-             Title="Тренировки"
+             Title="{x:Static res:Strings.Workouts}"
              BackgroundColor="{DynamicResource PrimaryColor}">
 
     <ContentPage.Resources>
@@ -53,13 +53,13 @@
             <!-- Заголовок и кнопка добавления -->
             <Frame BackgroundColor="{DynamicResource SecondaryColor}">
                 <Grid ColumnDefinitions="*,Auto">
-                    <Label Text="Мои упражнения" 
+                    <Label Text="{x:Static res:Strings.My_exercises}" 
                            FontSize="18"
                            FontAttributes="Bold"
                            VerticalOptions="Center"/>
 
                     <Button Grid.Column="1" 
-                            Text="➕ Новое" 
+                            Text="{x:Static res:Strings.New}" 
                             Command="{Binding AddExerciseCommand}"
                             Style="{StaticResource ExerciseButtonStyle}"/>
                 </Grid>
@@ -84,7 +84,7 @@
                                 <!-- Кнопка добавления счета -->
                                 <Button Grid.Column="1"
                                         Grid.Row="0"
-                                        Text="Добавить счёт ➕"
+                                        Text="{x:Static res:Strings.Add_a_score}"
                                         Style="{StaticResource ExerciseButtonStyle}"
                                         Command="{Binding Path=BindingContext.AddScoreCommand, 
                                                   Source={RelativeSource AncestorType={x:Type ContentPage}}}"
