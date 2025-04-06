@@ -35,7 +35,7 @@
     
     <ScrollView>
         <VerticalStackLayout>
-            <Entry Placeholder="{x:Static res:Strings.Enter_weight}" Text="{Binding Weight, Mode=TwoWay}"/>
+            <Entry Placeholder="{x:Static res:Strings.Enter_weight}" Text="{Binding Weight, Mode=TwoWay}" Keyboard="Numeric"/>
             <Button Text="{x:Static res:Strings.Add_a_post}" Command="{Binding AddWeightCommand}"/>
             <!-- График -->
             <Frame>
