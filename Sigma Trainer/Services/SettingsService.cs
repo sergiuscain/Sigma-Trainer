@@ -29,7 +29,8 @@ namespace Sigma_Trainer.Services
             }
             else
             {
-                _appSettings = new AppSettings { SelectedTheme = ThemesEnum.Темная.ToString()};
+                //Тема по умолчанию
+                _appSettings = new AppSettings { SelectedTheme = ThemesEnum.Golden.ToString()};
                 await SaveSettingsAsync();
             }
         }
@@ -53,7 +54,22 @@ namespace Sigma_Trainer.Services
         /// <returns></returns>
         public async Task SetThemeAsync(string theme)
         {
-            _appSettings.SelectedTheme = theme;
+            if (theme == Strings.Light)
+            {
+                _appSettings.SelectedTheme = ThemesEnum.Light.ToString();
+            }
+            else if (theme == Strings.Dark)
+            {
+                _appSettings.SelectedTheme = ThemesEnum.Dark.ToString();
+            }
+            else if (theme == Strings.Space)
+            {
+                _appSettings.SelectedTheme = ThemesEnum.Space.ToString();
+            }
+            else if (theme == Strings.Golden)
+            {
+                _appSettings.SelectedTheme = ThemesEnum.Golden.ToString();
+            }
             await SaveSettingsAsync();
         }
         /// <summary>
@@ -66,15 +82,19 @@ namespace Sigma_Trainer.Services
             // Удаляем все текущие темы
             Application.Current.Resources.MergedDictionaries.Clear();
 
-            if (selectedTheme == ThemesEnum.Светлая.ToString())
+            if (selectedTheme == ThemesEnum.Light.ToString() || selectedTheme == ThemesEnum.Светлая.ToString() || selectedTheme == ThemesEnum.Hell.ToString())
             {
                 Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
             }
-            else if (selectedTheme == ThemesEnum.Темная.ToString())
+            else if (selectedTheme == ThemesEnum.Dark.ToString() || selectedTheme == ThemesEnum.Темная.ToString() || selectedTheme == ThemesEnum.Dunkel.ToString())
             {
                 Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
             }
-            else if (selectedTheme == ThemesEnum.Космос.ToString())
+            else if (selectedTheme == ThemesEnum.Space.ToString() || selectedTheme == ThemesEnum.Космос.ToString() || selectedTheme == ThemesEnum.Raum.ToString())
+            {
+                Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
+            }
+            else if (selectedTheme == ThemesEnum.Golden.ToString() || selectedTheme == ThemesEnum.Золотая.ToString())
             {
                 Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
             }

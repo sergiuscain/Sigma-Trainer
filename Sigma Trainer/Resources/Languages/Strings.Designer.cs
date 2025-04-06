@@ -205,6 +205,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Golden.
+        /// </summary>
+        internal static string Golden {
+            get {
+                return ResourceManager.GetString("Golden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kcal.
         /// </summary>
         internal static string Kcal {

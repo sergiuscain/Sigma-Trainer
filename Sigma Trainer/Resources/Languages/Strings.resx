@@ -267,4 +267,7 @@
   <data name="Enter weight" xml:space="preserve">
     <value>Enter weight!</value>
   </data>
+  <data name="Golden" xml:space="preserve">
+    <value>Golden</value>
+  </data>
 </root>

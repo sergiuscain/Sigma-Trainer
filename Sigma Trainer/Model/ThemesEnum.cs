@@ -1,6 +1,16 @@
 ﻿enum ThemesEnum
 {
+    Dark,
+    Light,
+    Space,
+    Golden,
+
     Темная,
     Светлая,
-    Космос
+    Космос,
+    Золотая,
+
+    Dunkel,
+    Hell,
+    Raum,
 }

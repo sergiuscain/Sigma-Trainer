@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sigma_Trainer.Resources.Themes.GoldenTheme">
+    
+    <!-- Темный фон -->
+    <Color x:Key="PrimaryColor">#121212</Color>
+    <!-- Темный фон -->
+    <Color x:Key="SecondaryColor">#1E1E1E</Color>
+    <!-- Золотой текст -->
+    <Color x:Key="TextColor">#a48d1b</Color>
+    <!-- Светло-золотистый текст -->
+    <Color x:Key="TextColor2">#FFEA00</Color>
+    <!-- Серый для плейсхолдера -->
+    <Color x:Key="PlaceholderColor">#B0B0B0</Color>
+    <!-- Темный бордер -->
+    <Color x:Key="BorderColor">#3c3c3c</Color>
+    
+</ResourceDictionary>

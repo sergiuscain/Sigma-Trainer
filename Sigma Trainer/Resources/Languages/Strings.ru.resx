@@ -267,4 +267,7 @@
   <data name="Enter weight" xml:space="preserve">
     <value>Введите вес!</value>
   </data>
+  <data name="Golden" xml:space="preserve">
+    <value>Золотая</value>
+  </data>
 </root>

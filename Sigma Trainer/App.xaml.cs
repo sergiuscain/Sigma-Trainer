@@ -30,6 +30,19 @@ namespace Sigma_Trainer
             // Применяем выбранную тему
             switch (selectedTheme)
             {
+                case "Light":
+                    Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
+                    break;
+                case "Dark":
+                    Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
+                    break;
+                case "Space":
+                    Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
+                    break;
+                case "Golden":
+                    Application.Current.Resources.MergedDictionaries.Add(new GoldenTheme());
+                    break;
+
                 case "Светлая":
                     Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
                     break;
@@ -37,6 +50,19 @@ namespace Sigma_Trainer
                     Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
                     break;
                 case "Космос":
+                    Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
+                    break;
+                case "Золотая":
+                    Application.Current.Resources.MergedDictionaries.Add(new GoldenTheme());
+                    break;
+
+                case "Hell":
+                    Application.Current.Resources.MergedDictionaries.Add(new LightTheme());
+                    break;
+                case "Dunkel":
+                    Application.Current.Resources.MergedDictionaries.Add(new DarkTheme());
+                    break;
+                case "Raum":
                     Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
                     break;
             }
