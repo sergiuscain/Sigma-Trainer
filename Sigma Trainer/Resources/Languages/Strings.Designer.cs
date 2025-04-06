@@ -178,6 +178,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter weight!.
+        /// </summary>
+        internal static string Enter_weight {
+            get {
+                return ResourceManager.GetString("Enter weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fats .
         /// </summary>
         internal static string Fats_ {
@@ -439,15 +448,6 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Summary.
-        /// </summary>
-        internal static string Summary {
-            get {
-                return ResourceManager.GetString("Summary", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Theme settings.
         /// </summary>
         internal static string Theme_settings {
@@ -480,6 +480,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        internal static string Weight {
+            get {
+                return ResourceManager.GetString("Weight", resourceCulture);
             }
         }
         

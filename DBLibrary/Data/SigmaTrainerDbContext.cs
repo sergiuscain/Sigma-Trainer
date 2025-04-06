@@ -14,6 +14,7 @@ namespace DBLibrary.Data
         public DbSet<DailyFoodStatistics> DailyFoodStatistics { get; set; }
         public DbSet<Exercises> Exercises { get; set; }
         public DbSet<DailyExerciseStatistics> DailyExerciseSatistics { get; set; }
+        public DbSet<WeightRecord> WeightRecords { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

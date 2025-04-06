@@ -41,6 +41,7 @@ namespace Sigma_Trainer
             builder.Services.AddSingleton<SettingsPage>();
             builder.Services.AddSingleton<SettingsViewModel>();
             builder.Services.AddSingleton<SettingsService>();
+            builder.Services.AddSingleton<WeightService>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

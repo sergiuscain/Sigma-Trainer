@@ -20,7 +20,7 @@
 
     <TabBar>
         <ShellContent
-            Title="{x:Static res:Strings.Summary}"
+            Title="{x:Static res:Strings.Weight}"
             ContentTemplate="{DataTemplate local:SummaryPage}"
             Route="MainPage"/>
 

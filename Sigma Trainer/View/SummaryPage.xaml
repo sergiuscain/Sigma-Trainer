@@ -2,13 +2,58 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmode="clr-namespace:Sigma_Trainer.ViewModel"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              xmlns:res="clr-namespace:Sigma_Trainer.Resources.Languages"
              x:DataType="viewmode:SummaryViewModel"
              x:Class="Sigma_Trainer.View.SummaryPage"
-             Title="{x:Static res:Strings.Summary}"
+             Title="{x:Static res:Strings.Weight}"
              BackgroundColor="{DynamicResource PrimaryColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
 
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+            <Setter Property="BorderColor" Value="{DynamicResource SecondaryColor}"/>
+        </Style>
+    </ContentPage.Resources>
+    
     <ScrollView>
+        <VerticalStackLayout>
+            <Entry Placeholder="{x:Static res:Strings.Enter_weight}" Text="{Binding Weight, Mode=TwoWay}"/>
+            <Button Text="{x:Static res:Strings.Add_a_post}" Command="{Binding AddWeightCommand}"/>
+            <!-- График -->
+            <Frame>
+                <lvc:CartesianChart Series="{Binding Series}" 
+                        XAxes="{Binding XAxes}" 
+                        YAxes="{Binding YAxes}"
+                        HeightRequest="300" 
+                        VerticalOptions="Start"
+                        BackgroundColor="Transparent"/>
+            </Frame>
+            <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" >
+                <Button Grid.Column="0" Text="{x:Static res:Strings.Previous}" Command="{Binding PreviousPageCommand}"/>
+                <Button Grid.Column="1" Text="14" Command="{Binding EditPageSizeCommand}" CommandParameter="14"/>
+                <Button Grid.Column="2" Text="30" Command="{Binding EditPageSizeCommand}" CommandParameter="30"/>
+                <Button Grid.Column="3" Text="90" Command="{Binding EditPageSizeCommand}" CommandParameter="90"/>
+                <Button Grid.Column="4" Text="180" Command="{Binding EditPageSizeCommand}" CommandParameter="180"/>
+                <Button Grid.Column="5" Text="{x:Static res:Strings.Next}" Command="{Binding NextPageCommand}"/>
+            </Grid>
+        </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
