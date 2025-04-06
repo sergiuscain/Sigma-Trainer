@@ -258,4 +258,10 @@
   <data name="Space" xml:space="preserve">
     <value>Космос</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Предедущая.</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Следующая</value>
+  </data>
 </root>

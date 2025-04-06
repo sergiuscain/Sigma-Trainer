@@ -67,12 +67,17 @@ namespace Sigma_Trainer.Services
         /// Берем статистику за days дней по данному упражнению. Если в какой-то из дней нету записей статистики, создаем её.
         /// </summary>
         /// <param name="ExerciseId"></param>
-        /// <param name="days"></param>
+        /// <param name="size"></param>
         /// <returns></returns>
-        public async Task<List<DailyExerciseStatistics>> GetExerciseStatisticsAsync(int ExerciseId, int days)
+        public async Task<List<DailyExerciseStatistics>> GetExerciseStatisticsAsync(int ExerciseId, int size, int pageNumber)
         {
             var today = DateTime.Today;
-            var lastDay = today.AddDays(-days);
+            var lastDay = today.AddDays(-size);
+            if(pageNumber > 0)
+            {
+                today = today.AddDays(-(size*pageNumber));
+                lastDay = lastDay.AddDays(-(size*pageNumber));
+            }
 
             // Получаем статистику за указанный период
             var statistics = await _context.DailyExerciseSatistics

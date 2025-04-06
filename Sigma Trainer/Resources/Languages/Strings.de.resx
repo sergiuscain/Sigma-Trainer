@@ -258,4 +258,10 @@
   <data name="Space" xml:space="preserve">
     <value>Raum</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Rückwärts</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Vorwärts</value>
+  </data>
 </root>

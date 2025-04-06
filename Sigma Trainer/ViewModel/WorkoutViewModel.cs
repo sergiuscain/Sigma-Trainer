@@ -22,10 +22,14 @@ namespace Sigma_Trainer.ViewModel
         public Axis[] YAxes { get; set; }
         public List<string> Dates { get; set; }
         public ISeries[] Series { get; set; }
+        private int StatisticsPageNumber { get; set; }
+        private int StatisticsPageSize { get; set; }
         public WorkoutViewModel(StatisticsService statisticsService, ExerciseService exerciseService)
         {
             _statisticsService = statisticsService;
             _exerciseService = exerciseService;
+            StatisticsPageNumber = 0;
+            StatisticsPageSize = 7;
         }
         [RelayCommand]
         public async Task AddExercise()
@@ -79,7 +83,7 @@ namespace Sigma_Trainer.ViewModel
             var series = new List<LineSeries<int>>();
             for (int i = 0; i < exercisesList.Count; i++)
             {
-                var exerciseStatistics = await _statisticsService.GetExerciseStatisticsAsync(exercisesList[i].Id, 14);
+                var exerciseStatistics = await _statisticsService.GetExerciseStatisticsAsync(exercisesList[i].Id, StatisticsPageSize, StatisticsPageNumber);
                 var name = exercisesList[i].Name;
                 var values = exerciseStatistics.Select(es => es.count).ToArray();
                 series.Add(CreateLineSeries(values, name));
@@ -119,6 +123,85 @@ namespace Sigma_Trainer.ViewModel
             OnPropertyChanged(nameof(Series));
             OnPropertyChanged(nameof(XAxes));
             OnPropertyChanged(nameof(YAxes));
+        }
+        [RelayCommand]
+        public async Task GetNextStatisticsPage()
+        {
+            if (StatisticsPageNumber > 0)
+                StatisticsPageNumber--;
+            else 
+                StatisticsPageNumber = 0;
+            var exercisesList = await _exerciseService.GetExercises();
+            var series = new List<LineSeries<int>>();
+            for (int i = 0; i < exercisesList.Count; i++)
+            {
+                var exerciseStatistics = await _statisticsService.GetExerciseStatisticsAsync(exercisesList[i].Id, StatisticsPageSize, StatisticsPageNumber);
+                var name = exercisesList[i].Name;
+                var values = exerciseStatistics.Select(es => es.count).ToArray();
+                series.Add(CreateLineSeries(values, name));
+                if (i == 0)
+                {
+                    Dates = exerciseStatistics.Select(es => es.DateTime.ToString("dd:MM:yy")).ToList();
+                }
+            }
+            Series = series.ToArray();
+            XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Labels = Dates,
+                    LabelsRotation = 45,
+                    TextSize = 12,
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightGray.WithAlpha(100)),
+                    SeparatorsAtCenter = false,
+                    TicksPaint = new SolidColorPaint(SKColors.LightGray),
+                    TicksAtCenter = true
+                }
+            };
+
+            OnPropertyChanged(nameof(Series));
+            OnPropertyChanged(nameof(XAxes));
+        }
+        [RelayCommand]
+        public async Task GetPreviousStatisticsPage()
+        {
+            StatisticsPageNumber++;
+            var exercisesList = await _exerciseService.GetExercises();
+            var series = new List<LineSeries<int>>();
+            for (int i = 0; i < exercisesList.Count; i++)
+            {
+                var exerciseStatistics = await _statisticsService.GetExerciseStatisticsAsync(exercisesList[i].Id, StatisticsPageSize, StatisticsPageNumber);
+                var name = exercisesList[i].Name;
+                var values = exerciseStatistics.Select(es => es.count).ToArray();
+                series.Add(CreateLineSeries(values, name));
+                if (i == 0)
+                {
+                    Dates = exerciseStatistics.Select(es => es.DateTime.ToString("dd:MM:yy")).ToList();
+                }
+            }
+            Series = series.ToArray();
+            XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Labels = Dates,
+                    LabelsRotation = 45,
+                    TextSize = 12,
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightGray.WithAlpha(100)),
+                    SeparatorsAtCenter = false,
+                    TicksPaint = new SolidColorPaint(SKColors.LightGray),
+                    TicksAtCenter = true
+                }
+            };
+
+            OnPropertyChanged(nameof(Series));
+            OnPropertyChanged(nameof(XAxes));
+        }
+        [RelayCommand]
+        public async Task EditStatisticsPageSizer(string size)
+        {
+            StatisticsPageSize = int.Parse(size);
+            await LoadStatistics();
         }
         // Метод для создания линии с заданным цветом
         private LineSeries<int> CreateLineSeries(int[] values, string name)
