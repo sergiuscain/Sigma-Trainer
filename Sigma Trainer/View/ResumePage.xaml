@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sigma_Trainer.View.ResumePage"
+             Title="ResumePage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
+            <Setter Property="TextColor" Value="{DynamicResource TextColor2}" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Padding" Value="15" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Padding" Value="15" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="VerticalStackLayout">
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+            <Setter Property="Padding" Value="15" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView BackgroundColor="{DynamicResource TextColor}">
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Заголовок -->
+            <Label Text="Сергей Королев"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Краткое описание -->
+            <Label Text="Fullstack-разработчик с опытом работы в веб, desktop и Android приложениях. Специализируюсь на .NET, ASP.NET Core, Maui и немного JS и React и других современных технологиях."
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="16" />
+
+            <!-- Секция с технологиями -->
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Технологии:"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <FlexLayout Wrap="Wrap" JustifyContent="Start">
+                        <Label Text="Windows Forms" Margin="5" />
+                        <Label Text="C#" Margin="5" />
+                        <Label Text="ASP.NET" Margin="5" />
+                        <Label Text="LINQ" Margin="5" />
+                        <Label Text="LiveCharts2" Margin="5" />
+                        <Label Text="RabbitMQ" Margin="5" />
+                        <Label Text="REST API" Margin="5" />
+                        <Label Text="JavaScript" Margin="5" />
+                        <Label Text="MVC" Margin="5" />
+                        <Label Text="Git" Margin="5" />
+                        <Label Text="SQL" Margin="5" />
+                        <Label Text="Razor" Margin="5" />
+                        <Label Text=".NET Core" Margin="5" />
+                        <Label Text="Entity Framework" Margin="5" />
+                        <Label Text="MS SQL" Margin="5" />
+                        <Label Text="HTML" Margin="5" />
+                        <Label Text="JSON" Margin="5" />
+                        <Label Text="Bootstrap" Margin="5" />
+                        <Label Text="CSS" Margin="5" />
+                        <Label Text="ООП" Margin="5" />
+                        <Label Text="ASP.NET Core" Margin="5" />
+                        <Label Text="React" Margin="5" />
+                        <Label Text="Draw.io" Margin="5" />
+                        <Label Text="MAUI" Margin="5" />
+                        <Label Text="PostgreSQL" Margin="5" />
+                    </FlexLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Секция с ссылками -->
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Ссылки:"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+                    <Button Text="GitHub"
+                            Clicked="OnGitHubClicked" />
+                    <Button Text="HeadHunter"
+                            Clicked="OnHhClicked" />
+                    <Button Text="Telegram"
+                            Clicked="OnTelegramClicked" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

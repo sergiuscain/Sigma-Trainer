@@ -51,6 +51,7 @@
                                 TitleColor="Black"/>
                 </VerticalStackLayout>
             </Frame>
+            <Button Text="Resume" Command="{Binding GoToResumeCommand}"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -40,6 +40,9 @@ namespace Sigma_Trainer
             builder.Services.AddSingleton<AddExerciseViewModel>();
             builder.Services.AddSingleton<SettingsPage>();
             builder.Services.AddSingleton<SettingsViewModel>();
+            builder.Services.AddSingleton<ResumePage>();
+            builder.Services.AddSingleton<ResumeViewModel>();
+            //Сервисы
             builder.Services.AddSingleton<SettingsService>();
             builder.Services.AddSingleton<WeightService>();
 #if DEBUG

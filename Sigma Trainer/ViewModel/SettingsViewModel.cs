@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Sigma_Trainer.Resources.Languages;
 using Sigma_Trainer.Services;
+using Sigma_Trainer.View;
 using System.Globalization;
 
 namespace Sigma_Trainer.ViewModel
@@ -83,6 +84,12 @@ namespace Sigma_Trainer.ViewModel
             var settingsService = new SettingsService();
             settingsService.SetTheme(selectedTheme); // Сохраняем тему в настройках
             ((App)Application.Current).ApplyTheme(selectedTheme); // Применяем тему ко всему приложению
+        }
+        [RelayCommand]
+        public async Task GoToResume()
+        {
+            var page = new ResumePage(new ResumeViewModel());
+            await Shell.Current.Navigation.PushAsync(page);
         }
     }
 }
