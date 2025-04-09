@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приложение для трекинга занятий спортом, питания и веса</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        img {
-            width: 300px;
-            margin: 10px;
-        }
-    </style>
-</head>
-<body>
-
 <h1>Приложение для трекинга занятий спортом, питания и веса</h1>
 
 <h2>Скачать можно:</h2>
@@ -67,6 +44,3 @@
 <img src="https://github.com/user-attachments/assets/93d7e650-2f59-48c1-b35f-d867d0681f94" alt="Скриншот 4"/>
 <img src="https://github.com/user-attachments/assets/de077651-c60c-41bb-bf7a-57e10e66216a" alt="Скриншот 5"/>
 <img src="https://github.com/user-attachments/assets/83b5b5b6-d3b8-4519-96d9-a56175d6b5f2" alt="Скриншот 6"/>
-
-</body>
-</html>
