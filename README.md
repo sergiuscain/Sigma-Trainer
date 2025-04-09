@@ -40,10 +40,10 @@
 <h2>Скриншоты:</h2>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
     <img src="https://github.com/user-attachments/assets/acdcc006-d72a-4a91-8560-d406c45afa2d" alt="Скриншот 1" style="width: 45%; margin-bottom: 10px;"/>
-    <img src="https://github.com/user-attachments/assets/bdb84bc4-409f-47e0-9d58-43b45eb8c8a2" alt="Скриншот 2" style="width: 45%; margin-bottom: 10px;"/>
-    <img src="https://github.com/user-attachments/assets/10c5fa8d-a2a4-471d-b6cb-77d6cc93e8da" alt="Скриншот 3" style="width: 45%; margin-bottom: 10px;"/>
-    <img src="https://github.com/user-attachments/assets/65079db1-c7c2-4d43-a83a-9430522d4334" alt="Скриншот 4" style="width: 45%; margin-bottom: 10px;"/>
     <img src="https://github.com/user-attachments/assets/c3c8089d-2d51-4d15-a113-31b10b141dc7" alt="Скриншот 5" style="width: 45%; margin-bottom: 10px;"/>
+    <img src="https://github.com/user-attachments/assets/10c5fa8d-a2a4-471d-b6cb-77d6cc93e8da" alt="Скриншот 3" style="width: 45%; margin-bottom: 10px;"/>
+    <img src="https://github.com/user-attachments/assets/bdb84bc4-409f-47e0-9d58-43b45eb8c8a2" alt="Скриншот 2" style="width: 45%; margin-bottom: 10px;"/>
+    <img src="https://github.com/user-attachments/assets/65079db1-c7c2-4d43-a83a-9430522d4334" alt="Скриншот 4" style="width: 45%; margin-bottom: 10px;"/>
     <img src="https://github.com/user-attachments/assets/03f6ba2f-8af2-4492-92bf-a64af9045ae3" alt="Скриншот 6" style="width: 45%; margin-bottom: 10px;"/>
 </div>
 
