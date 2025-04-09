@@ -30,7 +30,7 @@ namespace Sigma_Trainer.Services
             else
             {
                 //Тема по умолчанию
-                _appSettings = new AppSettings { SelectedTheme = ThemesEnum.Golden.ToString()};
+                _appSettings = new AppSettings { SelectedTheme = ThemesEnum.Light.ToString(), SelectedLanguage = "Русский" };
                 await SaveSettingsAsync();
             }
         }
@@ -96,7 +96,7 @@ namespace Sigma_Trainer.Services
             }
             else if (selectedTheme == ThemesEnum.Golden.ToString() || selectedTheme == ThemesEnum.Золотая.ToString())
             {
-                Application.Current.Resources.MergedDictionaries.Add(new SpaceTheme());
+                Application.Current.Resources.MergedDictionaries.Add(new GoldenTheme());
             }
         }
         /// <summary>

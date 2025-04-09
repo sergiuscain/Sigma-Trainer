@@ -22,6 +22,10 @@
             <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
             <Setter Property="FontSize" Value="15"/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+        </Style>
     </ContentPage.Resources>
 
     <ScrollView>
