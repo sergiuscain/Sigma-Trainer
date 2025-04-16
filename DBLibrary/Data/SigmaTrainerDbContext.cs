@@ -9,12 +9,8 @@ namespace DBLibrary.Data
         public SigmaTrainerDbContext()
         {
         }
-
-        public DbSet<FoodRecord> FoodRecords { get; set; }
-        public DbSet<DailyFoodStatistics> DailyFoodStatistics { get; set; }
         public DbSet<Exercises> Exercises { get; set; }
         public DbSet<DailyExerciseStatistics> DailyExerciseSatistics { get; set; }
-        public DbSet<WeightRecord> WeightRecords { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -37,13 +33,6 @@ namespace DBLibrary.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Настройка FoodRecord
-            modelBuilder.Entity<FoodRecord>()
-                .HasKey(f => f.Id);
-
-            // Настройка DailyFoodStatistics
-            modelBuilder.Entity<DailyFoodStatistics>()
-                .HasKey(f => f.Id);
 
             // Настройка Exercises
             modelBuilder.Entity<Exercises>()

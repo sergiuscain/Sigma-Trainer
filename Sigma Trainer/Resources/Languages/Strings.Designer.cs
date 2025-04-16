@@ -79,38 +79,11 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 🍴Add a meal.
-        /// </summary>
-        internal static string AddAMeal {
-            get {
-                return ResourceManager.GetString("AddAMeal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Add Exercise.
         /// </summary>
         internal static string AddExercise {
             get {
                 return ResourceManager.GetString("AddExercise", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Breakfast.
-        /// </summary>
-        internal static string Breakfast {
-            get {
-                return ResourceManager.GetString("Breakfast", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Calories (kcal).
-        /// </summary>
-        internal static string Calories__kcal_ {
-            get {
-                return ResourceManager.GetString("Calories (kcal)", resourceCulture);
             }
         }
         
@@ -124,38 +97,11 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Carbohydrates.
-        /// </summary>
-        internal static string carbohydrates {
-            get {
-                return ResourceManager.GetString("carbohydrates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Carbohydrates (g).
-        /// </summary>
-        internal static string Carbohydrates__g_ {
-            get {
-                return ResourceManager.GetString("Carbohydrates (g)", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Dark.
         /// </summary>
         internal static string Dark {
             get {
                 return ResourceManager.GetString("Dark", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Dinner.
-        /// </summary>
-        internal static string dinner {
-            get {
-                return ResourceManager.GetString("dinner", resourceCulture);
             }
         }
         
@@ -178,47 +124,11 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter weight!.
-        /// </summary>
-        internal static string Enter_weight {
-            get {
-                return ResourceManager.GetString("Enter weight", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fats .
-        /// </summary>
-        internal static string Fats_ {
-            get {
-                return ResourceManager.GetString("Fats ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fats (g).
-        /// </summary>
-        internal static string Fats__g_ {
-            get {
-                return ResourceManager.GetString("Fats (g)", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Golden.
         /// </summary>
         internal static string Golden {
             get {
                 return ResourceManager.GetString("Golden", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kcal.
-        /// </summary>
-        internal static string Kcal {
-            get {
-                return ResourceManager.GetString("Kcal", resourceCulture);
             }
         }
         
@@ -237,33 +147,6 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Light {
             get {
                 return ResourceManager.GetString("Light", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Lunch.
-        /// </summary>
-        internal static string Lunch_ {
-            get {
-                return ResourceManager.GetString("Lunch ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meal type.
-        /// </summary>
-        internal static string Meal_type {
-            get {
-                return ResourceManager.GetString("Meal type", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meals for today.
-        /// </summary>
-        internal static string Meals_for_today {
-            get {
-                return ResourceManager.GetString("Meals for today", resourceCulture);
             }
         }
         
@@ -295,15 +178,6 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New meal.
-        /// </summary>
-        internal static string New_meal {
-            get {
-                return ResourceManager.GetString("New meal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to New exercise.
         /// </summary>
         internal static string NewExercise {
@@ -322,15 +196,6 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nutrition.
-        /// </summary>
-        internal static string Nutrition {
-            get {
-                return ResourceManager.GetString("Nutrition", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         internal static string OK {
@@ -345,24 +210,6 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Previous {
             get {
                 return ResourceManager.GetString("Previous", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Proteins.
-        /// </summary>
-        internal static string Proteins {
-            get {
-                return ResourceManager.GetString("Proteins", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Proteins (g).
-        /// </summary>
-        internal static string Proteins__g_ {
-            get {
-                return ResourceManager.GetString("Proteins (g)", resourceCulture);
             }
         }
         
@@ -430,15 +277,6 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Snack.
-        /// </summary>
-        internal static string Snack {
-            get {
-                return ResourceManager.GetString("Snack", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Space.
         /// </summary>
         internal static string Space {
@@ -475,15 +313,6 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Today&apos;s summary.
-        /// </summary>
-        internal static string Today_s_summary {
-            get {
-                return ResourceManager.GetString("Today\'s summary", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Type.
         /// </summary>
         internal static string Type {
@@ -493,29 +322,11 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Weight.
-        /// </summary>
-        internal static string Weight {
-            get {
-                return ResourceManager.GetString("Weight", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Workouts.
         /// </summary>
         internal static string Workouts {
             get {
                 return ResourceManager.GetString("Workouts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You haven&apos;t eaten anything today..
-        /// </summary>
-        internal static string You_haven_t_eaten_anything_today_ {
-            get {
-                return ResourceManager.GetString("You haven\'t eaten anything today.", resourceCulture);
             }
         }
     }

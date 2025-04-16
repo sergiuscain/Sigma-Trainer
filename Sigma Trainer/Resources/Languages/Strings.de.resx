@@ -123,44 +123,11 @@
   <data name="Add a score" xml:space="preserve">
     <value>Punkte hinzufügen➕</value>
   </data>
-  <data name="AddAMeal" xml:space="preserve">
-    <value>🍴Fügen Sie eine Mahlzeit hinzu</value>
-  </data>
   <data name="AddExercise" xml:space="preserve">
     <value>Übung hinzufügen</value>
   </data>
-  <data name="Breakfast" xml:space="preserve">
-    <value>Frühstück</value>
-  </data>
-  <data name="Calories (kcal)" xml:space="preserve">
-    <value>Kalorien (kcal)</value>
-  </data>
-  <data name="carbohydrates" xml:space="preserve">
-    <value>Kohlenhydrate</value>
-  </data>
-  <data name="Carbohydrates (g)" xml:space="preserve">
-    <value>Kohlenhydrate (g)</value>
-  </data>
-  <data name="Lunch " xml:space="preserve">
-    <value>Mittagessen</value>
-  </data>
-  <data name="Fats " xml:space="preserve">
-    <value>Fette</value>
-  </data>
-  <data name="Fats (g)" xml:space="preserve">
-    <value>Fett (g)</value>
-  </data>
-  <data name="Kcal" xml:space="preserve">
-    <value>Kcal (g)</value>
-  </data>
   <data name="Language" xml:space="preserve">
     <value>Sprache</value>
-  </data>
-  <data name="Meal type" xml:space="preserve">
-    <value>Art der Mahlzeit</value>
-  </data>
-  <data name="Meals for today" xml:space="preserve">
-    <value>Mahlzeiten für heute</value>
   </data>
   <data name="My exercises" xml:space="preserve">
     <value>Meine Übungen</value>
@@ -171,20 +138,8 @@
   <data name="New" xml:space="preserve">
     <value>➕ Neu</value>
   </data>
-  <data name="New meal" xml:space="preserve">
-    <value>Neue Mahlzeit</value>
-  </data>
   <data name="NewExercise" xml:space="preserve">
     <value>Neue Übung</value>
-  </data>
-  <data name="Nutrition" xml:space="preserve">
-    <value>Ernährung</value>
-  </data>
-  <data name="Proteins" xml:space="preserve">
-    <value>Proteine</value>
-  </data>
-  <data name="Proteins (g)" xml:space="preserve">
-    <value>Proteine ​​(g)</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>✅Speichern</value>
@@ -198,32 +153,17 @@
   <data name="Settings" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
-  <data name="Weight" xml:space="preserve">
-    <value>Gewicht</value>
-  </data>
   <data name="Theme settings" xml:space="preserve">
     <value>Theme-Einstellungen</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Zeit</value>
   </data>
-  <data name="Today's summary" xml:space="preserve">
-    <value>Zusammenfassung für heute</value>
-  </data>
   <data name="Type" xml:space="preserve">
     <value>Typ</value>
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Übungen</value>
-  </data>
-  <data name="dinner" xml:space="preserve">
-    <value>Abendessen</value>
-  </data>
-  <data name="Snack" xml:space="preserve">
-    <value>Snack</value>
-  </data>
-  <data name="You haven't eaten anything today." xml:space="preserve">
-    <value>Du hast heute nichts gegessen</value>
   </data>
   <data name="Push-ups" xml:space="preserve">
     <value>Liegestütze</value>
@@ -263,9 +203,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Vorwärts</value>
-  </data>
-  <data name="Enter weight" xml:space="preserve">
-    <value>Gewicht eingeben!</value>
   </data>
   <data name="Golden" xml:space="preserve">
     <value>Golden</value>

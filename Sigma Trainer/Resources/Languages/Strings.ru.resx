@@ -123,44 +123,11 @@
   <data name="Add a score" xml:space="preserve">
     <value>Добавить счёт➕</value>
   </data>
-  <data name="AddAMeal" xml:space="preserve">
-    <value>🍴Добавить прием пищи</value>
-  </data>
   <data name="AddExercise" xml:space="preserve">
     <value>Добавить Упражнение</value>
   </data>
-  <data name="Breakfast" xml:space="preserve">
-    <value>Завтрак</value>
-  </data>
-  <data name="Calories (kcal)" xml:space="preserve">
-    <value>Калории (ккал)</value>
-  </data>
-  <data name="carbohydrates" xml:space="preserve">
-    <value>Углеводы</value>
-  </data>
-  <data name="Carbohydrates (g)" xml:space="preserve">
-    <value>Углеводы (г)</value>
-  </data>
-  <data name="Lunch " xml:space="preserve">
-    <value>Обед</value>
-  </data>
-  <data name="Fats " xml:space="preserve">
-    <value>Жиры </value>
-  </data>
-  <data name="Fats (g)" xml:space="preserve">
-    <value>Жиры (г)</value>
-  </data>
-  <data name="Kcal" xml:space="preserve">
-    <value>Ккал (г)</value>
-  </data>
   <data name="Language" xml:space="preserve">
     <value>Язык</value>
-  </data>
-  <data name="Meal type" xml:space="preserve">
-    <value>Тип приема пищи</value>
-  </data>
-  <data name="Meals for today" xml:space="preserve">
-    <value>Приемы пищи за сегодня</value>
   </data>
   <data name="My exercises" xml:space="preserve">
     <value>Мои упражнения</value>
@@ -171,20 +138,8 @@
   <data name="New" xml:space="preserve">
     <value>➕ Новое</value>
   </data>
-  <data name="New meal" xml:space="preserve">
-    <value>Новый приём пищи</value>
-  </data>
   <data name="NewExercise" xml:space="preserve">
     <value>Новое упражнение</value>
-  </data>
-  <data name="Nutrition" xml:space="preserve">
-    <value>Питание</value>
-  </data>
-  <data name="Proteins" xml:space="preserve">
-    <value>Белки</value>
-  </data>
-  <data name="Proteins (g)" xml:space="preserve">
-    <value>Белки (г)</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>✅Сохранить</value>
@@ -198,32 +153,17 @@
   <data name="Settings" xml:space="preserve">
     <value>Настройки</value>
   </data>
-  <data name="Weight" xml:space="preserve">
-    <value>Вес</value>
-  </data>
   <data name="Theme settings" xml:space="preserve">
     <value>Настройки темы</value>
   </data>
   <data name="Time" xml:space="preserve">
     <value>Время</value>
   </data>
-  <data name="Today's summary" xml:space="preserve">
-    <value>Сводка за сегодня</value>
-  </data>
   <data name="Type" xml:space="preserve">
     <value>Тип</value>
   </data>
   <data name="Workouts" xml:space="preserve">
     <value>Тренировки</value>
-  </data>
-  <data name="dinner" xml:space="preserve">
-    <value>Ужин</value>
-  </data>
-  <data name="Snack" xml:space="preserve">
-    <value>Перекус</value>
-  </data>
-  <data name="You haven't eaten anything today." xml:space="preserve">
-    <value>Вы ничего не ели сегодня</value>
   </data>
   <data name="Push-ups" xml:space="preserve">
     <value>Отжимания</value>
@@ -263,9 +203,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Следующая</value>
-  </data>
-  <data name="Enter weight" xml:space="preserve">
-    <value>Введите вес!</value>
   </data>
   <data name="Golden" xml:space="preserve">
     <value>Золотая</value>

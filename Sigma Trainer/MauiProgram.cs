@@ -24,18 +24,11 @@ namespace Sigma_Trainer
                 });
             //База дынных
             builder.Services.AddDbContext<SigmaTrainerDbContext>();
-            builder.Services.AddSingleton<FoodService>();
             builder.Services.AddSingleton<StatisticsService>();
             builder.Services.AddSingleton<ExerciseService>();
             //Вкладки
-            builder.Services.AddSingleton<SummaryPage>();
-            builder.Services.AddSingleton<SummaryViewModel>();
             builder.Services.AddSingleton<WorkoutPage>();
             builder.Services.AddSingleton<WorkoutViewModel>();
-            builder.Services.AddSingleton<NutritionPage>();
-            builder.Services.AddSingleton<NutritionViewModel>();
-            builder.Services.AddSingleton<AddFoodRecordPage>();
-            builder.Services.AddSingleton<AddFoodRecordViewModel>();
             builder.Services.AddSingleton<AddExercisePage>();
             builder.Services.AddSingleton<AddExerciseViewModel>();
             builder.Services.AddSingleton<SettingsPage>();
@@ -44,7 +37,6 @@ namespace Sigma_Trainer
             builder.Services.AddSingleton<ResumeViewModel>();
             //Сервисы
             builder.Services.AddSingleton<SettingsService>();
-            builder.Services.AddSingleton<WeightService>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

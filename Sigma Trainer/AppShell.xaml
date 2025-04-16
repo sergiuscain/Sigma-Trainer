@@ -20,20 +20,9 @@
 
     <TabBar>
         <ShellContent
-            Title="{x:Static res:Strings.Weight}"
-            ContentTemplate="{DataTemplate local:SummaryPage}"
-            Route="MainPage"/>
-
-        <ShellContent
             Title="{x:Static res:Strings.Workouts}"
             ContentTemplate="{DataTemplate local:WorkoutPage}"
             Route="WorkoutPage"/>
-
-        <ShellContent
-            Title="{x:Static res:Strings.Nutrition}"
-            ContentTemplate="{DataTemplate local:NutritionPage}"
-            Route="NutritionPage"/>
-
         <ShellContent
             Title="{x:Static res:Strings.Settings}"
             ContentTemplate="{DataTemplate local:SettingsPage}"
