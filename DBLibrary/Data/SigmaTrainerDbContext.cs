@@ -10,7 +10,7 @@ namespace DBLibrary.Data
         {
         }
         public DbSet<Exercises> Exercises { get; set; }
-        public DbSet<DailyExerciseStatistics> DailyExerciseSatistics { get; set; }
+        public DbSet<DailyExerciseStatistics> DailyExerciseStaistics { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

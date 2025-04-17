@@ -15,7 +15,6 @@ public partial class WorkoutPage : ContentPage
     {
 		await _viewModel.InitExercises();
 	 	await _viewModel.UpdateExerciseList();
-		await _viewModel.LoadStatistics();
         base.OnAppearing();
     }
 }

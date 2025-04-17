@@ -16,7 +16,7 @@ namespace Sigma_Trainer.Services
             var exercise = await _context.Exercises.FirstOrDefaultAsync(e => e.Id == ExerciseId);
             if (exercise != null)
             {
-                var statistics = await _context.DailyExerciseSatistics
+                var statistics = await _context.DailyExerciseStaistics
                     .FirstOrDefaultAsync(de => de.DateTime.Date == DateTime.Today && de.ExercisesId == ExerciseId);
                 if (statistics != null)
                 {
@@ -25,7 +25,7 @@ namespace Sigma_Trainer.Services
                 else
                 {
                     statistics = new DailyExerciseStatistics { count = count, DateTime = DateTime.Today, exercises = exercise };
-                    _context.DailyExerciseSatistics.Add(statistics);
+                    _context.DailyExerciseStaistics.Add(statistics);
                 }
                 await _context.SaveChangesAsync();
             }
@@ -47,7 +47,7 @@ namespace Sigma_Trainer.Services
             }
 
             // Получаем статистику за указанный период
-            var statistics = await _context.DailyExerciseSatistics
+            var statistics = await _context.DailyExerciseStaistics
                 .Where(es => es.ExercisesId == ExerciseId && es.DateTime <= today && es.DateTime >= lastDay)
                 .ToListAsync();
 
@@ -86,7 +86,7 @@ namespace Sigma_Trainer.Services
         public async Task<List<DailyExerciseStatistics>> GetExerciseStatisticsAsync(int ExerciseId)
         {
             var today = DateTime.Today;
-            var allStatistics = await _context.DailyExerciseSatistics
+            var allStatistics = await _context.DailyExerciseStaistics
                 .Where(es => es.exercises.Id == ExerciseId).ToListAsync();
             return allStatistics;
         }

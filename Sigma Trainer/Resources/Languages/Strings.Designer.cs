@@ -106,6 +106,15 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete the exercise?.
+        /// </summary>
+        internal static string DeleteExerciseAnswer {
+            get {
+                return ResourceManager.GetString("DeleteExerciseAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter a new name:.
         /// </summary>
         internal static string Enter_a_new_name {
@@ -300,6 +309,15 @@ namespace Sigma_Trainer.Resources.Languages {
         internal static string Theme_settings {
             get {
                 return ResourceManager.GetString("Theme settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This action cannot be undone!!!.
+        /// </summary>
+        internal static string This_action_cannot_be_undone_ {
+            get {
+                return ResourceManager.GetString("This action cannot be undone!", resourceCulture);
             }
         }
         

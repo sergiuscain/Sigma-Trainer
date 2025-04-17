@@ -26,7 +26,17 @@ namespace Sigma_Trainer.Services
             var existingExercise = await _context.Exercises.FirstOrDefaultAsync(e => e.Id == exerciseID);
             if (existingExercise != null)
             {
+                // Удаляем связанные записи из DailyExerciseStatistics
+                var statisticsToRemove = _context.DailyExerciseStaistics
+                    .Where(x => x.ExercisesId == exerciseID)
+                    .ToList();
+
+                _context.DailyExerciseStaistics.RemoveRange(statisticsToRemove); // Удаляем все связанные записи
+
+                // Удаляем само упражнение
                 _context.Exercises.Remove(existingExercise);
+
+                // Сохраняем изменения в базе данных
                 await _context.SaveChangesAsync();
             }
         }

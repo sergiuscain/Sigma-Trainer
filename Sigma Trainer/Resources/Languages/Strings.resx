@@ -207,4 +207,10 @@
   <data name="Golden" xml:space="preserve">
     <value>Golden</value>
   </data>
+  <data name="DeleteExerciseAnswer" xml:space="preserve">
+    <value>Are you sure you want to delete the exercise?</value>
+  </data>
+  <data name="This action cannot be undone!" xml:space="preserve">
+    <value>This action cannot be undone!!!</value>
+  </data>
 </root>
