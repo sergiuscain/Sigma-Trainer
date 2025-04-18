@@ -54,8 +54,7 @@
 
                     <Button Grid.Column="1" 
                             Text="{x:Static res:Strings.New}" 
-                            Command="{Binding AddExerciseCommand}"
-                            Style="{StaticResource ExerciseButtonStyle}"/>
+                            Command="{Binding AddExerciseCommand}"/>
                 </Grid>
             </Frame>
 
@@ -72,7 +71,6 @@
                                 <Button Grid.Column="0"
                                         Grid.Row="0"
                                         Text="{Binding Name}"
-                                        Style="{StaticResource ExerciseButtonStyle}"
                                         Command="{Binding Path=BindingContext.GoToExerciseCommand, 
                                                   Source={RelativeSource AncestorType={x:Type ContentPage}}}"
                                         CommandParameter="{Binding Id}"/>
@@ -80,7 +78,6 @@
                                 <Button Grid.Column="1"
                                         Grid.Row="0"
                                         Text="{x:Static res:Strings.Add_a_score}"
-                                        Style="{StaticResource ExerciseButtonStyle}"
                                         Command="{Binding Path=BindingContext.AddScoreCommand, 
                                                   Source={RelativeSource AncestorType={x:Type ContentPage}}}"
                                         CommandParameter="{Binding Id}"/>
@@ -88,7 +85,6 @@
                                 <Button Grid.Column="2"
                                         Grid.Row="0"
                                         Text="✏️"
-                                        Style="{StaticResource ExerciseButtonStyle}"
                                         Command="{Binding Path=BindingContext.EditExerciseCommand, 
                                                   Source={RelativeSource AncestorType={x:Type ContentPage}}}"
                                         CommandParameter="{Binding Id}"/>
