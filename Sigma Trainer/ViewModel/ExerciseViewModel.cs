@@ -22,6 +22,10 @@ namespace Sigma_Trainer.ViewModel
         public ISeries[] Series { get; set; }
         private int StatisticsPageNumber { get; set; }
         private int StatisticsPageSize { get; set; }
+        [ObservableProperty]
+        public int statisticsForPeriod;
+        [ObservableProperty]
+        public int allTimeStatistics;
         public ExerciseViewModel(int exerciseId, ExerciseService exerciseService, StatisticsService statisticsService)
         {
             _exerciseId = exerciseId;
@@ -35,6 +39,8 @@ namespace Sigma_Trainer.ViewModel
             var exercise = await _exerciseService.GetExerciseAsync(_exerciseId);
             var exerciseStatistics = await _statisticsService.GetExerciseStatisticsAsync(exercise.Id, StatisticsPageSize, StatisticsPageNumber);
             var values = exerciseStatistics.Select(es => es.count).ToArray();
+            StatisticsForPeriod = values.Sum();
+            AllTimeStatistics = await _statisticsService.GetAllExerciseValue(_exerciseId);
             Dates = exerciseStatistics.Select(es => es.DateTime.ToString("dd:MM:yy")).ToList();
             Name = exercise.Name;
             var series = new LineSeries<int>

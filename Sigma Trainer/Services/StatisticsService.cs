@@ -90,5 +90,9 @@ namespace Sigma_Trainer.Services
                 .Where(es => es.exercises.Id == ExerciseId).ToListAsync();
             return allStatistics;
         }
+        public async Task<int> GetAllExerciseValue(int ExerciseId)
+        {
+            return await _context.DailyExerciseStaistics.Where(es => es.ExercisesId == ExerciseId).Select(es => es.count).SumAsync();
+        }
     }
 }
