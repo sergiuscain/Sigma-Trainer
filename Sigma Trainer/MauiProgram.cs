@@ -24,8 +24,10 @@ namespace Sigma_Trainer
                 });
             //База дынных
             builder.Services.AddDbContext<SigmaTrainerDbContext>();
-            builder.Services.AddSingleton<StatisticsService>();
-            builder.Services.AddSingleton<ExerciseService>();
+            builder.Services.AddSingleton<IStatisticsService, EFStatisticsService>();
+            builder.Services.AddSingleton<IExerciseService, EFExerciseService>();
+            //Сервисы
+            builder.Services.AddSingleton<ISettingsService, EFSettingsService>();
             //Вкладки
             builder.Services.AddSingleton<WorkoutPage>();
             builder.Services.AddSingleton<WorkoutViewModel>();
@@ -37,8 +39,6 @@ namespace Sigma_Trainer
             builder.Services.AddSingleton<ResumeViewModel>();
             builder.Services.AddSingleton<ExercisePage>();
             builder.Services.AddSingleton<ExerciseViewModel>();
-            //Сервисы
-            builder.Services.AddSingleton<SettingsService>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

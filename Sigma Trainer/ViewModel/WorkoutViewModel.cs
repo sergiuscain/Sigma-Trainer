@@ -10,11 +10,11 @@ namespace Sigma_Trainer.ViewModel
 {
     public partial class WorkoutViewModel : ObservableObject
     {
-        private readonly StatisticsService _statisticsService;
-        private readonly ExerciseService _exerciseService;
+        private readonly IStatisticsService _statisticsService;
+        private readonly IExerciseService _exerciseService;
         [ObservableProperty]
         ObservableCollection<Exercises> exercises;
-        public WorkoutViewModel(StatisticsService statisticsService, ExerciseService exerciseService)
+        public WorkoutViewModel(IStatisticsService statisticsService, IExerciseService exerciseService)
         {
             _statisticsService = statisticsService;
             _exerciseService = exerciseService;

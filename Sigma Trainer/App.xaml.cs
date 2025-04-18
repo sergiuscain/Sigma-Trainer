@@ -7,20 +7,19 @@ namespace Sigma_Trainer
 {
     public partial class App : Application
     {
-        public App(SigmaTrainerDbContext context)
+        private readonly ISettingsService _settingsService;
+        public App(SigmaTrainerDbContext context, ISettingsService settingsService)
         {
             InitializeComponent();
-            // Установка культуры по умолчанию
-            var settingsService = new SettingsService();
-            settingsService.LoadLanguage();
-            Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
             context.Database.EnsureCreated();
+            _settingsService = settingsService;
+            _settingsService.LoadLanguageAsync().Wait();
+            Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
         }
-        private void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+        private async void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
         {
-            var settingsService = new SettingsService();
-            var selectedTheme = settingsService.GetTheme();
-            ApplyTheme(selectedTheme); // Применяем сохранённую тему, а не системную
+            var selectedTheme = await _settingsService.GetThemeAsync();
+            ApplyTheme(selectedTheme);
         }
         public void ApplyTheme(string selectedTheme)
         {
@@ -69,9 +68,8 @@ namespace Sigma_Trainer
         }
         protected override async void OnStart()
         {
-            // Загружаем тему при запуске приложения
-            var settingsService = new SettingsService();
-            var selectedTheme = settingsService.GetTheme();
+            //Загружаем тему при запуске приложения
+            var selectedTheme = await _settingsService.GetThemeAsync();
             ApplyTheme(selectedTheme); // Применяем тему ко всему приложению
         }
         protected override Window CreateWindow(IActivationState? activationState)

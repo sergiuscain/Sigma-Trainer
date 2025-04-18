@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Sigma_Trainer.Services
 {
-    public class StatisticsService
+    public class EFStatisticsService : IStatisticsService
     {
         private readonly SigmaTrainerDbContext _context;
-        public StatisticsService(SigmaTrainerDbContext context)
+        public EFStatisticsService(SigmaTrainerDbContext context)
         {
             _context = context;
         }
@@ -40,10 +40,10 @@ namespace Sigma_Trainer.Services
         {
             var today = DateTime.Today;
             var lastDay = today.AddDays(-size);
-            if(pageNumber > 0)
+            if (pageNumber > 0)
             {
-                today = today.AddDays(-(size*pageNumber));
-                lastDay = lastDay.AddDays(-(size*pageNumber));
+                today = today.AddDays(-(size * pageNumber));
+                lastDay = lastDay.AddDays(-(size * pageNumber));
             }
 
             // Получаем статистику за указанный период

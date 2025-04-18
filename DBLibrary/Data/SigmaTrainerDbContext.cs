@@ -1,6 +1,6 @@
 ﻿using DBLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.IO;
+using Sigma_Trainer.Model;
 
 namespace DBLibrary.Data
 {
@@ -11,6 +11,7 @@ namespace DBLibrary.Data
         }
         public DbSet<Exercises> Exercises { get; set; }
         public DbSet<DailyExerciseStatistics> DailyExerciseStaistics { get; set; }
+        public DbSet<AppSettings> AppSettings { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -41,6 +42,9 @@ namespace DBLibrary.Data
             // Настройка DailyExerciseSatistics
             modelBuilder.Entity<DailyExerciseStatistics>()
                 .HasKey(es => es.Id);
+
+            modelBuilder.Entity<AppSettings>()
+               .HasKey(a => a.Id);
 
             // Связи
             modelBuilder.Entity<DailyExerciseStatistics>()

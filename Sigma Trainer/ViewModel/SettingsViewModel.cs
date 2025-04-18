@@ -17,9 +17,9 @@ namespace Sigma_Trainer.ViewModel
 
         [ObservableProperty]
         private string selectedLanguage;
-        private readonly SettingsService _settingsService;
-        private readonly ExerciseService _exerciseService;
-        public SettingsViewModel(SettingsService settingsService, ExerciseService exerciseService)
+        private readonly ISettingsService _settingsService;
+        private readonly IExerciseService _exerciseService;
+        public SettingsViewModel(ISettingsService settingsService, IExerciseService exerciseService)
         {
             _settingsService = settingsService;
             _exerciseService = exerciseService;
@@ -28,10 +28,10 @@ namespace Sigma_Trainer.ViewModel
             LoadCurrentLanguage(); // Загрузка текущего языка из настроек
         }
 
-        private void LoadCurrentLanguage()
+        private async void LoadCurrentLanguage()
         {
-            _settingsService.LoadLanguage(); // Загружаем язык из настроек
-            selectedLanguage = _settingsService.GetLanguage(); // Получаем текущий язык
+            await _settingsService.LoadLanguageAsync(); // Загружаем язык из настроек
+            selectedLanguage = await _settingsService.GetLanguageAsync(); // Получаем текущий язык
         }
 
         [RelayCommand]
@@ -48,8 +48,7 @@ namespace Sigma_Trainer.ViewModel
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(culture);
 
             // Сохранение выбранного языка в настройках
-            var settingsService = new SettingsService();
-            settingsService.SetLanguage(selectedLanguage);
+            _settingsService.SetLanguageAsync(selectedLanguage).Wait();
 
             //Переименовываем базовые упражнения
             var pullUp = _exerciseService.GetExerciseAsync("Pull-ups", "Подтягивания", "Klimmzüge").Result;
@@ -76,8 +75,7 @@ namespace Sigma_Trainer.ViewModel
         [RelayCommand]
         partial void OnSelectedThemeChanged(string selectedTheme)
         {
-            var settingsService = new SettingsService();
-            settingsService.SetTheme(selectedTheme); // Сохраняем тему в настройках
+            _settingsService.SetThemeAsync(selectedTheme).Wait(); // Сохраняем тему в настройках
             ((App)Application.Current).ApplyTheme(selectedTheme); // Применяем тему ко всему приложению
         }
         [RelayCommand]

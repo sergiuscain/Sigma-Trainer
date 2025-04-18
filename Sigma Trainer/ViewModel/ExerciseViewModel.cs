@@ -12,8 +12,8 @@ namespace Sigma_Trainer.ViewModel
     public partial class ExerciseViewModel : ObservableObject
     {
         private readonly int _exerciseId;
-        private readonly StatisticsService _statisticsService;
-        private readonly ExerciseService _exerciseService;
+        private readonly IStatisticsService _statisticsService;
+        private readonly IExerciseService _exerciseService;
         [ObservableProperty]
         public string name;
         public Axis[] XAxes { get; set; }
@@ -26,7 +26,7 @@ namespace Sigma_Trainer.ViewModel
         public int statisticsForPeriod;
         [ObservableProperty]
         public int allTimeStatistics;
-        public ExerciseViewModel(int exerciseId, ExerciseService exerciseService, StatisticsService statisticsService)
+        public ExerciseViewModel(int exerciseId, IExerciseService exerciseService, IStatisticsService statisticsService)
         {
             _exerciseId = exerciseId;
             _statisticsService = statisticsService;

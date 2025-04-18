@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Sigma_Trainer.Services
 {
-    public class ExerciseService
+    public class EFExerciseService : IExerciseService
     {
         private readonly SigmaTrainerDbContext _context;
-        public ExerciseService(SigmaTrainerDbContext context)
+        public EFExerciseService(SigmaTrainerDbContext context)
         {
             _context = context;
         }

@@ -7,10 +7,10 @@ namespace Sigma_Trainer.ViewModel
 {
     public partial class AddExerciseViewModel : ObservableObject
     {
-        private readonly ExerciseService _exerciseService;
+        private readonly IExerciseService _exerciseService;
         [ObservableProperty]
         public string exerciseName;
-        public AddExerciseViewModel(ExerciseService exerciseService)
+        public AddExerciseViewModel(IExerciseService exerciseService)
         {
             _exerciseService = exerciseService;
         }
