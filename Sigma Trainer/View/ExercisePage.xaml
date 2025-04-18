@@ -73,8 +73,8 @@
             <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*,*" Padding="10">
 
                 <!-- Заголовки столбцов -->
-                <Label Text="Все время" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontAttributes="Bold"/>
-                <Label Text="За период" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontAttributes="Bold"/>
+                <Label Text="{x:Static res:Strings.For_all_time}" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontAttributes="Bold"/>
+                <Label Text="{x:Static res:Strings.For_the_selected_period}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontAttributes="Bold"/>
                 <!-- Значения статистики -->
                 <Label Text="{Binding AllTimeStatistics}" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
                 <Label Text="{Binding StatisticsForPeriod}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>

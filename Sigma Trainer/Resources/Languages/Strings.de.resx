@@ -213,4 +213,10 @@
   <data name="This action cannot be undone!" xml:space="preserve">
     <value>Diese Aktion kann nicht rückgängig gemacht werden!!!</value>
   </data>
+  <data name="For all time" xml:space="preserve">
+    <value>Für alle Zeiten</value>
+  </data>
+  <data name="For the selected period" xml:space="preserve">
+    <value>Für den ausgewählten Zeitraum</value>
+  </data>
 </root>

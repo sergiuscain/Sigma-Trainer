@@ -133,6 +133,24 @@ namespace Sigma_Trainer.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to For all time.
+        /// </summary>
+        internal static string For_all_time {
+            get {
+                return ResourceManager.GetString("For all time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For the selected period.
+        /// </summary>
+        internal static string For_the_selected_period {
+            get {
+                return ResourceManager.GetString("For the selected period", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Golden.
         /// </summary>
         internal static string Golden {
