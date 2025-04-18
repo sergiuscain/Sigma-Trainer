@@ -2,8 +2,8 @@
 
 <h2>Скачать можно:</h2>
 <ul>
-    <li>в RuStore => на модерации...</li>
-    <li>apk файл в тг => <a href="https://t.me/sergiuscainDev/68/86">Скачать APK</a></li>
+    <li>в RuStore => <a href="https://www.rustore.ru/catalog/app/com.SergeyKorolev.SigmaTrainer">Скачать</a> (Последняя версия на данный момент на модерации. Там)</li>
+    <li>Apk файл в тг => <a href="https://t.me/sergiuscainDev/68/87">Скачать</a></li>
 </ul>
 
 <h2>Используемые технологии:</h2>
