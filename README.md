@@ -36,7 +36,6 @@
     <li>Локализация на 3 языка (английский, немецкий, русский).</li>
     <li>Смена тем (темная, светлая, космос, золото).</li>
 </ul>
-
 <h2>Скриншоты:</h2>
 <img src="https://github.com/user-attachments/assets/4fd7e51a-54b7-46da-927c-8e08b0098e47" alt="Скриншот 1" style="width: 30%; margin-bottom: 10px;"/>
 <img src="https://github.com/user-attachments/assets/deb413d9-fd55-425c-a462-f3dfc5088f86" alt="Скриншот 1" style="width: 30%; margin-bottom: 10px;"/>
@@ -49,6 +48,8 @@
     <img src="https://github.com/user-attachments/assets/65079db1-c7c2-4d43-a83a-9430522d4334" alt="Скриншот 4" style="width: 30%; margin-bottom: 10px;"/>
     <img src="https://github.com/user-attachments/assets/10c5fa8d-a2a4-471d-b6cb-77d6cc93e8da" alt="Скриншот 3" style="width: 30%; margin-bottom: 10px;"/>
 </div>
-
-
-
+<h2>Обновления:</h2>
+<h3>18.04.25</h3>
+<h4>Исправил вылет при первом запуске приложения</h4>
+<h4>Теперь статистика каждого упражнения отображается на отдельном графике</h4>
+<h4>Добавил отдельные вкладки для каждых упражнений</h4>
