@@ -38,10 +38,6 @@
 </ul>
 
 <h2>Скриншоты:</h2>
-![1](https://github.com/user-attachments/assets/4fd7e51a-54b7-46da-927c-8e08b0098e47)
-![2](https://github.com/user-attachments/assets/deb413d9-fd55-425c-a462-f3dfc5088f86)
-![3](https://github.com/user-attachments/assets/91bb7478-c0c6-46ec-be08-9f1c57e1ca5e)
-![4](https://github.com/user-attachments/assets/251bf723-5ecf-4bf7-bfb4-35873367f61f)
 <img src="https://github.com/user-attachments/assets/4fd7e51a-54b7-46da-927c-8e08b0098e47" alt="Скриншот 1" style="width: 30%; margin-bottom: 10px;"/>
 <img src="https://github.com/user-attachments/assets/deb413d9-fd55-425c-a462-f3dfc5088f86" alt="Скриншот 1" style="width: 30%; margin-bottom: 10px;"/>
 <img src="https://github.com/user-attachments/assets/91bb7478-c0c6-46ec-be08-9f1c57e1ca5e" alt="Скриншот 1" style="width: 30%; margin-bottom: 10px;"/>
